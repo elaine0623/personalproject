@@ -8,7 +8,7 @@ html {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-image: url(/img/flower.jpg) ;
+    background-image: url(img/flower.jpg) ;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 36%;
