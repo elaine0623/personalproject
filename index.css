@@ -3,7 +3,7 @@ header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-image: url(/img/milksea-fotor.png) ;
+    background-image: url(img/milksea-fotor.png) ;
     background-repeat: no-repeat;
     background-size: cover;
 }
