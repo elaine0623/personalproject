@@ -1,0 +1,132 @@
+.header_container{
+    margin-bottom: 0;
+}
+.banner_box{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 80px;
+}
+.banner{
+    width: 1200px;
+    /* height:60vh; */
+    height: 400px;
+    background-image: url(/img/banner1.png) ;
+    background-position: 50% 27%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner_title{
+    color:#000;
+    font-size: 32px;
+    background-color: #ECECEC99;
+    padding: 30px 50px;
+    font-family:"Noto Serif TC";
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+.wave{
+    position: absolute;
+    bottom:0px;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.Serif_TC{
+    font-size: 24px;
+    line-height: 1.2em;  
+    padding-bottom: 10px;
+    font-family:"Noto Serif TC";
+    letter-spacing: 1.5px;
+    /* font-weight: 800; */
+}
+.title_product{
+    margin-bottom: 30px;
+    margin-left: 80px;
+}
+.product_group{
+    margin: 0 auto;
+}
+.product_info, .product_feature{
+    display: flex;
+    align-items: center;
+}
+.product_feature{
+    padding: 10px 0;
+    border-top:1px solid#B3AEAE;
+    border-bottom:1px solid#B3AEAE;
+    font-size: 16px;
+    line-height:1.5em;  
+    letter-spacing: 1.5px;
+    font-family:"Noto Sans TC";
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.icon{
+    margin-right: 5px;
+}
+.feature{
+    margin-right: 15px;
+}
+.product_txt_box{
+    padding-left: 15px;
+}
+.product_txt li{
+    font-size: 14px;
+    line-height:1.8em;  
+    letter-spacing: 1.5px;
+    font-family:"Noto Sans TC";
+    font-weight: 300;
+    list-style:disc;
+}
+.product_card{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    justify-content: space-evenly;
+}
+.txt-container{
+    width: 425px;
+    /* margin-right: 80px; */
+}
+.pic{
+    width: 425px;
+}
+.pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.more_info a{
+    text-decoration: none;
+    background-color: #FF9A66;
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px 20px;
+    text-align: center;
+    font-family: 'Noto Sans TC';
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+.product_group{
+    display: flex;
+    flex-direction: column;
+}
+.more_info{
+    align-self: flex-end;
+    margin-right: 117px;
+    margin-bottom: 80px;
+}
+.blue a{
+    background-color: #0361A2;
+}
+.reverse{
+    flex-direction: row-reverse;
+}

@@ -1,0 +1,94 @@
+body{
+    background-color: #FFF;
+    background-image: url(/img/Union2.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-size: contain;
+}
+.headeritem a{
+    color: #FFF;
+}
+.header_container{
+    margin-bottom: 4%;
+}
+.title_login{
+    font-size: 40px;
+    color:#FFF;
+    margin-bottom: 60px;
+}
+.container{
+    text-align: center;
+}
+.login_txt{
+    width: 35%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+.login_txt_accout, .login_txt_psw{
+    color:#FFF;
+    display: block;
+    font-size: 16px;
+    line-height:1.8em;  
+    letter-spacing: 1.5px;
+    font-family:"Noto Sans TC";
+    font-weight: 300;
+    color:#fff ;
+}
+
+.login_txt_accout label,.login_txt_psw label{
+    display: block;
+    margin-bottom: 3px;
+    text-align: left;
+}
+input[type = "text"]{
+    /* margin-left: 20px; */
+    margin-bottom: 30px;
+    width: 80%;
+    background-color: #eee;
+    border: 3px #666;
+    border-radius: 15px;
+    padding: 5px;
+}
+.login_txt p{
+    align-self: flex-end;
+}
+.login_txt p a{
+    text-decoration: none;
+    color:#000;
+}
+.btn_login{
+    border-radius: 25px;
+    padding: 6px 60px;
+    background-color: #0361A2;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-family:"Noto Sans TC";
+    font-weight: 300;
+    color:#fff ;
+}
+.register{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-family:"Noto Sans TC";
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color:#fff ;
+    margin-top: 80px;
+    position: relative;
+}
+.register::before{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 1.5px;
+    background-color: #fff;
+    top: -22px;
+    left: 400px;
+}

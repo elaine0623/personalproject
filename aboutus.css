@@ -1,0 +1,97 @@
+.header_box{
+    width: 1200px;
+    margin: 0 auto;
+    height: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-image: url(/img/—Pngtree—summer\ graduation\ trip\ travel\ season_914225\ 1.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.header_box h2{
+    text-align: center;
+    position: absolute;
+    top:45%
+}
+.banner_title{
+    color:#000;
+    font-size: 40px;
+    background-color: #ECECEC99;
+    padding: 20px 30px;
+    font-weight: 700;
+}
+.wave{
+    position: absolute;
+    bottom:0px;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height:1.8em;  
+    letter-spacing: 1.5px;
+    font-family:"Noto Sans TC";
+    font-weight: 300;
+}
+.title_members{
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+.txt_header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    /* gap: 20px; */
+}
+.member_pic{
+    width: 120px;
+    padding-bottom: 8px;
+}
+.member_pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: top;
+    border-radius: 50%;
+}
+/* .member_pic img::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(../imgs/about/member_pop.png) no-repeat center center;
+    background-size: cover;
+} */
+.member_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 50px;
+    margin-bottom: 120px;
+}
+.content{
+    width: 270px;
+    padding-left: 10px;
+}
+.member_txt{
+    margin: 0 10px 30px; 
+}
+.member_name{
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 3px;
+    padding-left: 10px;
+}
+.jobtitle{
+    font-size: 14px;
+}

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="carts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC&display=swap" rel="stylesheet">
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+</head>
+<body>
+    <header>
+        <div class="header_container">
+            <div  class="logo">
+                <img src="LOGO.png" alt="logo">
+            </div>
+            <div class="headeritems">
+                <nav>
+                    <div class="headeritem aboutus">
+                        <a href="#">關於我們</a>
+                    </div>
+                    <div class="headeritem news">
+                        <a href="#">最新消息</a>
+                    </div>
+                    <div class="headeritem schedule">
+                        <a href="#">行程推薦</a>
+                    </div>
+                    <div class="headeritem contactus">
+                        <a href="#">聯絡我們</a>
+                    </div>
+                    <div class="headeritem login">
+                        <a href="#">會員登入</a>
+                    </div>
+                    <div class="headeritem search_icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="headeritem cart_icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <div class="headeritem btn allsche">
+                        <a href="#">出團一覽</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="other_recom">
+        <div class="container">
+            <h2 class="noto-serif title_other_recom">其他商品推薦</h2>
+            <div class="other_cardlist">
+                <div class="card">
+                    <div class="pic">
+                        <img src="/img/jpg (1).webp" alt="">
+                    </div>
+                    <div class="txt">
+                        <h3>宜蘭農場代購</h3>
+                        <p>4.5★(120) ｜ 200+已訂購</p>
+                        <p class="price">TWD $ 500 <a href="#"><i class="fa-solid fa-cart-shopping"></a></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="pic">
+                        <img src="/img/taiwan-yilan-sanxing-scallion_P1720800.jpg" alt="">
+                    </div>
+                    <div class="txt">
+                        <h3>蔥油餅體驗</h3>
+                        <p>4.8★(1,200) ｜ 2000+已訂購</p>
+                        <p class="price">TWD $ 300 <a href="#"><i class="fa-solid fa-cart-shopping"></a></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="pic">
+                        <img src="/img/83.jpg" alt="">
+                    </div>
+                    <div class="txt">
+                        <h3>溫泉泡湯卷</h3>
+                        <p>4.2★(2388) ｜ 3000+已訂購</p>
+                        <p class="price">TWD $ 1,500 <a href="#"><i class="fa-solid fa-cart-shopping"></a></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section_cart">
+        <div class="cart">
+            <div class="container">
+                <div class="cart_group">
+                    <h2 class="noto-serif title_cart">購物車</h2>
+                    <div class="items">
+                        <div class="checkbox">
+                            <i class="fa-solid fa-square-check"></i>
+                        </div>
+                        <div class="items_pic">
+                            <img src="/img/Yilan4.jpg" alt="">
+                        </div>
+                        <p>龜山島｜揭開牛奶海、<br>
+                            無人島神秘面紗</p>
+                        <div class="date">
+                            <label for="selectdate">選擇日期</label>
+                            <input type="date" name="" id="selectdate">
+                        </div>
+                        <div class="counts">
+                            <label for="selectpeople">選擇人數</label>
+                            <input type="number" step="1" id="selectpeople" min="1">
+                            <!-- <div class="sum">
+                                TWD $
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="sum">
+                            TWD $
+                    </div>
+                    <div class="items">
+                        <div class="checkbox">
+                            <i class="fa-solid fa-square-check"></i>
+                        </div>
+                        <div class="items_pic">
+                            <img src="/img/160523-1768-5-j3Kqt.jpg" alt="">
+                        </div>
+                        <p>烏石漁港｜具當地特色<br>伴手禮預訂服務</p>
+                        <div class="date">
+                            <label for="selectdate">選擇日期</label>
+                            <input type="date" name="" id="selectdate">
+                        </div>
+                        <div class="counts">
+                            <label for="selectpeople">選擇數量</label>
+                            <input type="number" step="1" id="selectpeople" min="1">
+                        </div>
+                    </div>
+                    <div class="sum ">
+                        TWD $
+                    </div>
+                    <div class="carts_info">
+                        <div class="selected">
+                            <span class="selected_all">
+                                    <i class="fa-solid fa-square-check checkbox"></i> <a href="#">全選(2)｜</a></span>
+                            <span><a href="#">刪除所選項目</a></span>
+                        </div>
+                        <div class="total">Total:</div>
+                    </div>
+                    <div class="carts_footer">
+                        <a href="#" class="check btn">前往結帳</a>
+                        <a href="#" class="return">繼續購物 ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="footer_container">
+            <div class="footer_items">
+                <div  class="logo">
+                    <img src="LOGO_w.png" alt="logo">
+                </div>
+                <div class="footer_txt">
+                    <h3><span class="Cinzel">Travel IN TW</span>旅遊台灣旅行社</h3>
+                    <p> 
+                        電話｜03-1234-5678</br>
+                        地址｜桃園市中壢區復興路 46 號</br>
+                        信箱｜tibame@gmail.com</br>
+                    </p>
+                    <p>Copyright © 2024 Adobe. All rights reserved</p>
+                </div>
+            </div>
+            <div class="footer_contactus">
+                <h3>聯絡我們</h3>
+                <div class="icon_group">
+                    <div class="icon_facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </div>
+                    <div class="icon_instagram">
+                        <i class="fa-brands fa-square-instagram"></i>                    </div>
+                    <div class="icon_youtube">
+                        <i class="fa-brands fa-square-youtube"></i>                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="refer">
+            <p>本網站為緯育TibaMe前端工程師專業技術養成班第88期學員專題作品，本平台僅供學習、展示之用。
+                <br>參考網站｜https://ninetyroadtravel.com/｜https://baby-travel.jp/｜https://www.kkday.com/zh-tw/promo/Queensland｜https://gooone.help/about/</p>
+        </div>
+    </section>
+</body>
+</html>

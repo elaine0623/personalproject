@@ -1,0 +1,238 @@
+.header_container{
+    margin-bottom: 0;
+}
+.banner_box{
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 80px;
+    width: 1200px;
+
+}
+.banner{
+    width: 1200px;
+    /* height:60vh; */
+    height: 400px;
+    background-image: url(/img/banner.jpg) ;
+    background-position: 50% 75%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner_title{
+    color:#fff;
+    font-size: 48px;
+    background-color: #ECECEC99;
+    padding: 5px 8px;
+}
+.wave{
+    position: absolute;
+    bottom:0px;
+}
+.container{
+    width: 1200px;
+    margin:0 auto 150px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.card_pic{
+    width: 300px;
+}
+.card_pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: top;
+    border-radius: 15px;
+}
+.card_list{
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    position: relative;
+}
+.about_place{
+    margin-bottom: 120px;
+}
+/* 標題宋體 */
+.Serif_TC{
+    font-size: 24px;
+    line-height: 1.2em;  
+    padding-bottom: 10px;
+    font-family:"Noto Serif TC";
+    letter-spacing: 1.5px;
+}
+.about_place h2, .salecoupon h2{
+    margin-bottom: 30px;
+}
+.info_content{
+    position: absolute;
+    bottom:-90px;
+    background-color: #003E60E5;
+    color: #fff;
+    border-radius: 25px;
+    width: 400px;
+    font-size: 16px;
+    line-height:1.8em;  
+    letter-spacing: 1.5px;
+    font-family:"Noto Sans TC";
+    padding: 15px;
+    font-weight: 300;
+
+}
+.cp, .cp_btn{
+    width: 340px;
+    background-color: #fff;
+    font-size: 16px;
+    line-height:1.8em;  
+    letter-spacing: 1.5px;
+    font-family:"Noto Sans TC";
+    padding: 15px;
+    font-weight: 300;
+    margin: 0 auto;
+    position: relative;
+}
+.cp{
+    border-top: 1.8px solid #FF9A66;
+}
+.cp::before{
+    content: '';
+    position: absolute;
+    right: -15px;
+    top: 0;
+    bottom: 0;
+    width: 15px;
+    z-index: 0;
+    background-image: radial-gradient(20px at right bottom, transparent 50%,#fff 50%);
+    /* border-radius: 0 0px 0 0; */
+}
+.cp::after{
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 0;
+    bottom: 0;
+    width: 15px;
+    z-index: 0;
+    background-image: radial-gradient(20px at left bottom, transparent 50%,#fff 50%);
+    /* border-radius: 0 0px 0 0; */
+}
+.salecoupon{
+
+    margin: 0 auto;
+    margin-top: 150px;
+}
+.cp_btn{
+    border-top:1px dashed #afafaf;
+    border-bottom:1px solid #afafaf;
+
+}
+.cp_btn::before{
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 0;
+    bottom: 0;
+    width: 15px;
+    z-index: 0;
+    background-image: radial-gradient(20px at left top, transparent 50%,#fff 50%);
+}
+.cp_btn::after{
+    content: '';
+    position: absolute;
+    right: -15px;
+    top: 0;
+    bottom: 0;
+    width: 15px;
+    z-index: 0;
+    background-image: radial-gradient(20px at right top, transparent 50%,#fff 50%);
+}
+.cp_btn .btn a{
+    text-decoration: none;
+    background-color: #003E60;
+    color:#fff;
+}
+.btn{
+    border-radius: 25px;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.title_reason{
+    margin-bottom: 30px;
+}
+
+.reason_list_pic{
+    width: 160px;
+    margin-bottom: 10px;
+}
+.reason_list_pic img{
+    width: 100%;
+}
+
+.circlesvg{  
+    clip-path: circle(50% at 48% 51%);    
+}
+.circlesvg1{  
+    clip-path: circle(50% at 50% 50%);    
+}
+.reason_list{
+    display: flex;
+    justify-content:center;
+    gap: 15px;
+}
+.reason_list_txt{
+    font-size: 16px;
+    line-height:1.8em;  
+    letter-spacing: 1.5px;
+    font-family:"Noto Sans TC";
+    /* padding: 15px; */
+    font-weight: 300;
+}
+.title_promote{
+    margin-bottom: 30px;
+}
+.promote_card{
+    box-shadow:4px 2px 10px 0px #eee;
+    transform: perspective(300px) rotate(0deg);
+    transition: 1s;
+}
+.promote_card:hover {
+    transform: perspective(300px) rotateY(360deg);
+}
+.promote_pic{
+    width: 275px;
+    height: 184px;
+}
+.promote_pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+    vertical-align: top;
+}
+/* .course_category ul li +li::before{
+    content: '/';
+    display: inline-block;
+    padding: 0px 4px;
+} */
+.promote_list{
+    display: flex;
+    gap: 15px;
+    justify-content: space-around;
+}
+.promote_txt{
+    text-align: start;
+    font-size: 16px;
+    line-height:1.8em;  
+    letter-spacing: 1.5px;
+    font-family:"Noto Sans TC";
+    padding: 15px;
+    font-weight: 400;
+    background-color: #fff;
+}
+.price{
+    text-align: end;
+}
