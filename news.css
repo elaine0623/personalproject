@@ -129,6 +129,7 @@
     border-bottom:1px solid #afafaf;
 
 }
+/* 完成折價卷的樣式/漸層CSS */
 .cp_btn::before{
     content: '';
     position: absolute;

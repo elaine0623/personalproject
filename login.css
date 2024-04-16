@@ -9,6 +9,9 @@ body{
 .headeritem a{
     color: #FFF;
 }
+nav .cart_icon a{
+    color: #000;
+}
 .header_container{
     margin-bottom: 4%;
 }

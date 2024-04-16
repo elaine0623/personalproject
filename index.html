@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Travel In Taiwan首頁</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -11,12 +11,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/favicon_io (1)/favicon.ico">
 </head>
 <body>
+    <!-- 背景圖設在header滿版設計 -->
     <header>
+        <!-- LOGO超連結回到首頁 -->
         <div  class="logo">
-            <img src="LOGO_w.png" alt="logo">
+            <a href="index.html"><img src="LOGO_w.png" alt="logo"></a>
         </div>
+        <!-- 導覽列display flex -->
         <div class="headeritems">
             <nav>
                 <div class="headeritem aboutus">
@@ -51,6 +55,7 @@
         <div class="wave"></div>
     </div>
     <section class="section_info">
+        <!-- 簡介與評論使用flex排版左右兩側 -->
         <div class="container">
             <div class="info">
                 <h2><div class="EN Cinzel">TRAVEL IN TW</div><div class="noto-serif bold">深度且自在的半自助小眾旅行團</div></h2>
@@ -76,6 +81,7 @@
     </section>
     <section class="news">
         <div class="news_header">
+            <!-- 在副標題旁邊有插圖使用position absoulte -->
             <div class="sec">
                 <div class="news_pic"><img src="img/illu-fotor-.png" alt=""></div>
                 <h2 class="Cinzel title_news">News</h2>
@@ -247,6 +253,7 @@
         </div>
     </section>
     <section class="rank_spot">
+        <!-- 使用flex完成排版+rank使用position-absoulte搭配before偽元素(完成文字的部分) -->
         <div class="rank_spot_container">
             <h2 class="Cinzel title_rank_spot">Tour</h2>
             <div class="first_rank">
