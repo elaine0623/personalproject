@@ -1,16 +1,19 @@
 body{
     background-color: #FFF;
-    background-image: url(img/Union2.png);
+    background-image: url(img/bcg2.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     /* background-position: center; */
     background-size: contain;
 }
 .headeritem a{
-    color: #FFF;
+    color: #000;
 }
 nav .cart_icon a{
     color: #000;
+}
+.allsche a{
+    color: #FFF;
 }
 .header_container{
     margin-bottom: 4%;
@@ -65,7 +68,7 @@ input[type = "text"]{
 .btn_login{
     border-radius: 25px;
     padding: 6px 60px;
-    background-color: #0361A2;
+    background-color: #003E60;
     text-decoration: none;
     text-align: center;
     font-size: 14px;

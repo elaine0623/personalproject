@@ -26,7 +26,7 @@
     background-color: #ECECEC99;
     padding: 30px 50px;
     font-family:"Noto Serif TC";
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 1.8px;
 }
 .wave{
@@ -49,6 +49,8 @@
 .title_detail{
     text-align: center;
     margin-bottom: 50px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
 }
 .product_info_pic{
     width: 800px;
@@ -109,7 +111,7 @@
     font-family: 'Noto Sans TC';
     letter-spacing: 2px;
     border-radius: 25px;
-    padding: 10px 20px;
+    padding: 8px 20px;
     text-align: center;
     text-decoration:none ;
 }
@@ -126,7 +128,6 @@
     letter-spacing: 1.5px;
     font-family:"Noto Sans TC";
     font-weight: 500;
-    margin-top: 20px;
 }
 .detail_info h3 span{
     /* color: #003E60; */
@@ -136,15 +137,18 @@
     font-weight: 400;
 }
 .detail_info{
-    padding: 10px 80px;
+    padding: 25px 60px;
     border: 1.8px solid #003E60;
     position: relative;
     margin-left: 50px;
     color: #003E60;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 .signupnow{
     position: absolute;
-    left: 210px;
+    left: 170px;
     bottom:30px;
 }
 
@@ -152,6 +156,7 @@
     font-size: 24px;
     text-align: center;
     padding-right: 55%;
+    font-weight: 600;
 }
 .timetable_group{
     max-width: 650px;
@@ -251,7 +256,8 @@
     gap: 40px;
     position: sticky;
     top:50%;
-    font-weight: 400;
+    font-family:'Noto Sans TC';
+    font-weight: 600;
 }
 .day{
     background-color: #85b8da;
@@ -263,13 +269,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    outline: 3px dashed #003E60;
+    outline: 1.8px dashed #003E60;
 
 }
 .title_other_recom{
     font-size: 24px;
     margin-bottom: 50px;
     text-align: center;
+    font-weight: 600;
+    letter-spacing: 1.8px;
 }
 .other_cardlist{
     display: flex;
@@ -294,10 +302,11 @@
     font-family:"Noto Sans TC";
     padding: 15px;
     font-weight: 400;
-    background-color:#fff ;
+    background-color:#FEE ;
 }
 .price{
     text-align: end;
+    letter-spacing: 0;
 }
 .card{
     box-shadow:4px 2px 8px 0px #eee;

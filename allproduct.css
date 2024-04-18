@@ -26,7 +26,7 @@
     background-color: #ECECEC99;
     padding: 30px 50px;
     font-family:"Noto Serif TC";
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 3px;
 }
 .wave{
@@ -48,6 +48,7 @@
 .title_product{
     margin-bottom: 30px;
     margin-left: 80px;
+    font-weight: 600;
 }
 .product_group{
     margin: 0 auto;
@@ -96,6 +97,7 @@
 }
 .pic{
     width: 425px;
+    transition:1s ease-in ;
 }
 .pic:hover{
     scale: 1.1;
@@ -128,9 +130,9 @@
     margin-right: 117px;
     margin-bottom: 80px;
 }
-.blue a{
+/* .blue a{
     background-color: #0361A2;
-}
+} */
 .reverse{
     flex-direction: row-reverse;
 }

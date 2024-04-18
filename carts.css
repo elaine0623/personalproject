@@ -3,6 +3,7 @@
     margin-bottom: 50px;
     text-align: center;
     letter-spacing: 1.8px;
+    font-weight: 600;
 }
 .other_cardlist{
     display: flex;
@@ -35,6 +36,9 @@
 }
 .price{
     text-align: end;
+    letter-spacing: 0;
+    margin-left: 20px;
+
 }
 .cart_group{
     width: 960px;
@@ -47,7 +51,7 @@
     padding: 30px 0px 30px 70px;
     position: relative;
     letter-spacing: 1.8px;
-    font-weight: 500;
+    font-weight: 600;
 }
 .title_cart::after{
     content: '';
@@ -58,9 +62,27 @@
     bottom: 0;
     right: 50px;
 }
+input[type=checkbox]{
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    background-color:#87BDC7;
+    border: 1px solid #87BDC7;
+    color: #87BDC7;
+    user-select: none; /* 防止文字被滑鼠選取反白 */
+    vertical-align: baseline;
+}
+
+input[type=checkbox]:checked{
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    background-color:#87BDC7;
+    color: #87BDC7;
+    vertical-align: baseline;
+}
 .checkbox{
-    font-size: 24px;
-    color:#87BDC7;
+    vertical-align: baseline;
 }
 .items_pic{
     width: 275px;
@@ -125,6 +147,7 @@ input[type = "number"]{
     display: block;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: relative;
     font-size: 16px;
     line-height:1.8em;  

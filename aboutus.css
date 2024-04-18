@@ -5,7 +5,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-image: url(img/—Pngtree—summer\ graduation\ trip\ travel\ season_914225\ 1.png) ;
+    background-image: url(img/aboutus_banner.jpg) ;
+    background-position: 50% 36%;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;

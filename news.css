@@ -22,10 +22,10 @@
     justify-content: center;
 }
 .banner_title{
-    color:#fff;
+    color:#000;
     font-size: 48px;
     background-color: #ECECEC99;
-    padding: 5px 8px;
+    padding: 20px 30px;
 }
 .wave{
     position: absolute;
@@ -63,6 +63,7 @@
     padding-bottom: 10px;
     font-family:"Noto Serif TC";
     letter-spacing: 1.5px;
+    font-weight: 600;
 }
 .about_place h2, .salecoupon h2{
     margin-bottom: 30px;
@@ -106,6 +107,7 @@
     width: 15px;
     z-index: 0;
     background-image: radial-gradient(20px at right bottom, transparent 50%,#fff 50%);
+    box-shadow: 5px 0px 5px -5px #999;
     /* border-radius: 0 0px 0 0; */
 }
 .cp::after{
@@ -117,6 +119,7 @@
     width: 15px;
     z-index: 0;
     background-image: radial-gradient(20px at left bottom, transparent 50%,#fff 50%);
+    /* box-shadow: -5px 0px 5px -5px #999; */
     /* border-radius: 0 0px 0 0; */
 }
 .salecoupon{
@@ -125,9 +128,9 @@
     margin-top: 150px;
 }
 .cp_btn{
-    border-top:1px dashed #afafaf;
+    border-top:1.3px dashed #afafaf;
     border-bottom:1px solid #afafaf;
-
+    box-shadow:0 2px 7px -5px #999;
 }
 /* 完成折價卷的樣式/漸層CSS */
 .cp_btn::before{
@@ -139,6 +142,7 @@
     width: 15px;
     z-index: 0;
     background-image: radial-gradient(20px at left top, transparent 50%,#fff 50%);
+    /* box-shadow: -5px 0px 5px -5px #999; */
 }
 .cp_btn::after{
     content: '';
@@ -149,6 +153,7 @@
     width: 15px;
     z-index: 0;
     background-image: radial-gradient(20px at right top, transparent 50%,#fff 50%);
+    box-shadow: 5px 0px 5px -5px #999;
 }
 .cp_btn .btn a{
     text-decoration: none;
@@ -236,4 +241,5 @@
 }
 .price{
     text-align: end;
+    letter-spacing: 0;
 }
