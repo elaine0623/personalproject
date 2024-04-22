@@ -69,6 +69,8 @@ header{
       transform: rotate(360deg);
     }
   }
+
+  /* 嘗試修改成RWD */
 .container{
     width: 1200px;
     display: flex;
@@ -130,6 +132,23 @@ header{
     color: #ffd700;
     gap: 3px;
 }
+@media screen and (max-width: 767px) {
+  .container{
+    width: 90%;
+    margin: 0 auto 150px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .rank_star{
+    display: flex;
+    justify-content: center;
+  }
+  .info{
+    margin-right: 0;
+  }
+}
+
 .news_header{
   /* display: flex;
   align-items: end; */
@@ -233,6 +252,28 @@ header{
 .card_pic3 img{
   border-radius: 0 35px 0 0;
 }
+
+
+@media screen and (max-width: 767px) {
+  .news_header{
+    width: 90%;
+  }
+  .card_list{
+    width: 80%;
+    margin: 0 auto 150px;
+    display: flex;
+    flex-direction: column;
+  }
+  .pic{
+    width: 100%;
+    border-radius: 35px 35px 0 0;
+  }
+  .pic img{
+    border-radius: 35px 35px 0 0;
+  }
+}
+
+
 .feature_container{
   width: 1200px;
   margin: 0 auto 150px;
@@ -322,6 +363,21 @@ font-size: 20px;
 }
 .reverse{
   flex-direction: row-reverse;
+}
+@media screen and (max-width: 767px) {
+  .feature_container{
+    width: 90%;
+    margin: 0 auto;
+  }
+  /* 看起來未對齊置中 */
+  .feature_group{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .list_container{
+    padding: 15px 15px 15px 15px;
+  }
 }
 
 .rank_spot_container{
@@ -493,6 +549,40 @@ font-size: 20px;
 
 .rank_num{
   display: inline-block;
+}
+
+@media screen and (max-width: 767px) {
+  .rank_spot_container{
+    width: 90%;
+    margin: 0 auto;
+  }
+  .rank_spot_pic{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .spot_content ul{
+    padding-left: 0;
+  }
+  .sec_spot_pic{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .first_rank{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  .other_spot_list{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 150px;
+  }
 }
 
 
