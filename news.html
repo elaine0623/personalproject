@@ -15,8 +15,9 @@
     <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
 </head>
 <body>
-    <header>
-        <div class="header_container">
+
+    <div class="header_container">  
+        <header>
             <div  class="logo">
                 <a href="index.html"><img src="LOGO.png" alt="logo"></a>
             </div>
@@ -48,14 +49,15 @@
                     </div>
                 </nav>
             </div>
+        </header>
+    </div>       
+    <div class="banner_box">
+        <div class="banner">
+            <h2 class="Cinzel banner_title">News</h2>
         </div>
-        <div class="banner_box">
-            <div class="banner">
-                <h2 class="Cinzel banner_title">News</h2>
-            </div>
-            <img src="wave.png" alt="" class="wave">
-        </div>
-    </header>
+        <img src="wave.png" alt="" class="wave">
+    </div>
+
     <section class="sale_info">
         <div class="container">
             <div class="about_place">
@@ -142,24 +144,43 @@
             <!-- 老師建議卡片動畫可以改成翻面後有簡介的資訊 -->
             <h2 class="Serif_TC title_promote">探索大自然的美&美食推薦</h2>
             <div class="promote_list">
-                <div class="promote_card">
-                    <div class="promote_pic">
-                        <img src="img/promote1.webp" alt="">
-                    </div>
-                    <div class="promote_txt">
-                        <h3>農場參觀行程(含賞花)</h3>
-                        <p>4.5★(120) ｜ 200+已訂購</p>
-                        <p class="price">TWD $ 500</p>
+                <div class="movement">
+                    <div class="promote_card">
+                        <div class="promote_pic">
+                            <img src="img/promote1.webp" alt="">
+                        </div>
+                        <div class="promote_txt">
+                            <h3>農場參觀行程(含賞花)</h3>
+                            <p>4.5★(120) ｜ 200+已訂購</p>
+                            <p class="price">TWD $ 500</p>
+                        </div>
                     </div>
                 </div>
-                <div class="promote_card">
-                    <div class="promote_pic">
-                        <img src="img/climbing-fotor.png" alt="">
-                    </div>
-                    <div class="promote_txt">
-                        <h3>健行自然生態之旅</h3>
-                        <p>4.8★(1200) ｜ 2000+已訂購</p>
-                        <p class="price">TWD $ 350</p>
+                <div class="movement_2">
+                    <div class="flip-box-inner">
+                        <div class="promote_card flip-box-front">
+                            <div class="promote_pic">
+                                <img src="img/climbing-fotor.png" alt="">
+                            </div>
+                            <div class="promote_txt">
+                                <h3>健行自然生態之旅</h3>
+                                <p>4.8★(1200) ｜ 2000+已訂購</p>
+                                <p class="price">TWD $ 350</p>
+                            </div>
+                        </div>
+                        <div class="flip-box-back">
+                            <div class="promote_txt">
+                                <ul>
+                                    <li>行程亮點</li>
+                                    <li>
+                                        <i class="fa-solid fa-van-shuttle"></i>提供接駁</li>
+                                    <li><i class="fa-solid fa-microphone"></i>專業導覽員解說
+                                    </li>
+                                    <li><i class="fa-brands fa-pagelines"></i>享受大自然</li>
+                                    <li><i class="fa-solid fa-mountain"></i>台北第一高峰</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="promote_card">

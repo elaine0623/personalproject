@@ -1,12 +1,21 @@
-header{
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-image: url(img/milksea-fotor.png) ;
-    background-repeat: no-repeat;
-    background-size: cover;
+/* banner獨立放背景圖 */
+.header_container{
+  height: 100vh;
+  background-image: url(img/milksea-fotor.png) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0;
+  /* max-width: 100%; */
 }
+/* header獨立div */
+header{
+  display: flex;
+  /* flex-wrap: wrap;  */
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+/* 波浪效果 */
 .wave-container {
     position: relative;
     /* background-color: #2A73FE; */
@@ -70,9 +79,39 @@ header{
     }
   }
 
+@media screen and (max-width:1200px){
+    .wave-container, .wave{
+      display: none;
+    }
+    .info h2 div:first-child{
+      margin-top: 50px;
+    }
+}
+
+@media screen and (max-width:992px){
+  .wave-container, .wave{
+    display: none;
+  }
+  .info h2 div:first-child{
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width:767px){
+  .wave-container, .wave{
+    display: none;
+  }
+  .info h2 div:first-child{
+    margin-top: 50px;
+  }
+  
+}
+
+
+
   /* 嘗試修改成RWD */
 .container{
-    width: 1200px;
+    max-width: 1200px;
     display: flex;
     justify-content: center;
     margin: 0 auto;
@@ -132,6 +171,44 @@ header{
     color: #ffd700;
     gap: 3px;
 }
+
+@media screen and (max-width:1200px){
+  .container{
+    width: 90%;
+    margin: 0 auto 150px;
+    /* display: flex;
+    flex-direction: column;
+    text-align: center; */
+  }
+  .rank_star{
+    display: flex;
+    justify-content: center;
+  }
+  .info{
+    margin-right: 0;
+  }
+
+}
+@media screen and (max-width:992px){
+  .container{
+    width: 90%;
+    margin: 0 auto 150px;
+    /* display: flex;
+    flex-direction: column;
+    text-align: center; */
+  }
+  .rank_star{
+    display: flex;
+    justify-content: center;
+  }
+  .info{
+    margin-right: 0;
+  }
+
+}
+
+
+
 @media screen and (max-width: 767px) {
   .container{
     width: 90%;
@@ -252,6 +329,44 @@ header{
 .card_pic3 img{
   border-radius: 0 35px 0 0;
 }
+@media screen and (max-width:1200px){
+  .news_header{
+    width: 90%;
+  }
+  .card_list{
+    width: 80%;
+    margin: 0 auto 150px;
+    /* display: flex;
+    flex-direction: column; */
+  }
+  .pic{
+    width: 100%;
+    height: 192px;
+  }
+  .pic img{
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (max-width:992px){
+  .news_header{
+    width: 90%;
+  }
+  .card_list{
+    width: 80%;
+    margin: 0 auto 150px;
+    /* display: flex;
+    flex-direction: column; */
+  }
+  .pic{
+    width: 100%;
+    height: 192px;
+  }
+  .pic img{
+    width: 100%;
+    height: 100%;
+  }
+}
 
 
 @media screen and (max-width: 767px) {
@@ -266,6 +381,7 @@ header{
   }
   .pic{
     width: 100%;
+    height: 100%;
     border-radius: 35px 35px 0 0;
   }
   .pic img{
@@ -275,7 +391,7 @@ header{
 
 
 .feature_container{
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto 150px;
 }
 .feature_container h2{
@@ -364,16 +480,80 @@ font-size: 20px;
 .reverse{
   flex-direction: row-reverse;
 }
+
+@media screen and (max-width: 1200px) {
+  .feature_container{
+    width: 90%;
+    margin: 0 auto 150px;
+  }
+  .feature_group{
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+  }
+  .group,.list_container{
+    width: 100%;
+  }
+  .group_pic img{
+    width: 100%;
+    height: 100%;  
+    object-fit: cover;
+  }
+  .group_txt{
+    padding: 12px;
+  }
+  .list_container{
+    padding: 15px 15px 15px 15px;
+}
+}
+
+@media screen and (max-width: 992px) {
+  .feature_container{
+    width: 90%;
+    margin: 0 auto 150px;
+  }
+  .feature_group{
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+  }
+  .group,.list_container{
+    width: 100%;
+  }
+  .group_pic img{
+    width: 100%;
+    height: 100%;  
+    object-fit: cover;
+  }
+  .group_txt{
+    padding: 12px;
+  }
+  .list_container{
+    padding: 15px 15px 15px 15px;
+}
+}
+
 @media screen and (max-width: 767px) {
   .feature_container{
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto 150px;
   }
-  /* 看起來未對齊置中 */
+  /* 看起來未對齊置中未填滿 */
   .feature_group{
     display: flex;
     justify-content: center;
     flex-direction: column;
+  }
+  .group,.list_container{
+    width: 100%;
+  }
+  .group_pic img{
+    width: 100%;
+    height: 100%;  
+    object-fit: cover;
+  }
+  .group_txt{
+    padding: 12px;
   }
   .list_container{
     padding: 15px 15px 15px 15px;
@@ -381,7 +561,7 @@ font-size: 20px;
 }
 
 .rank_spot_container{
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   /* text-align: center; */
 }
@@ -551,6 +731,72 @@ font-size: 20px;
   display: inline-block;
 }
 
+@media screen and (max-width: 1200px){
+  .rank_spot_container{
+    width: 90%;
+    margin: 0 auto;
+  }
+  .rank_spot_pic{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .spot_content ul{
+    padding-left: 0;
+  }
+  .sec_spot_pic{
+    width: 100%;
+    object-fit: cover;
+  }
+  .other_spot_list{
+    gap: 60px;
+  }
+  .circle{
+    left: -21px;
+    };
+  }
+
+@media screen and (max-width: 996px){
+  .rank_spot_container{
+    width: 90%;
+    margin: 0 auto;
+  }
+  .rank_spot_pic{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .spot_content ul{
+    padding-left: 0;
+  }
+  .sec_spot_pic{
+    width: 100%;
+    object-fit: cover;
+  }
+  .other_spot_list{
+    gap: 40px;
+  }
+  .circle{
+    left: -28px;
+  }
+  .sec_spot_pic{
+    width: 100%;
+  }
+  .secspot_txt{
+    width: 90%;
+  }
+  .card_txt{
+    font-size: clamp(12px,1.5%,15px);
+    padding: 2.5%;
+  }
+  .card_txt h3{
+    margin:0 1.5% 6% 0%;
+  }
+} 
+
+
+
+
 @media screen and (max-width: 767px) {
   .rank_spot_container{
     width: 90%;
@@ -580,10 +826,34 @@ font-size: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 30px;
-    margin-bottom: 150px;
+    gap: 80px;
+    margin-bottom:150px;
   }
+  .circle{
+    left: -15px;
+  }
+  .sec_spot:hover{
+    scale: 1;
+  }
+  .yilanspot{
+    position: relative;
+    bottom: 18px;
+    left: -34px;
+  }
+  .rank_spot_txt{
+    padding: 0;
+  }
+
+  .card_txt{
+    font-size: 15px;
+    padding: 15px 0 15px 15px;
+  }
+  .card_txt h3{
+    margin:10px 0;
+  }
+
 }
+
 
 
 /* @media screen and (max-width:1200px){

@@ -14,45 +14,64 @@
     <link rel="icon" href="img/favicon_io (1)/favicon.ico">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- owl.carousel -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"></script> -->
 </head>
 <body>
     <!-- 背景圖設在header滿版設計 -->
-    <header>
-        <!-- LOGO超連結回到首頁 -->
-        <div  class="logo">
-            <a href="index.html"><img src="LOGO_w.png" alt="logo"></a>
+
+        <div class="header_container">
+            <input type="checkbox" id="menu-switch">
+            <!-- LOGO超連結回到首頁 -->   
+            <header>
+                <div  class="logo">
+                    <a href="index.html"><img src="LOGO_w.png" alt="logo"></a>
+                </div>
+                <!-- 導覽列display flex -->
+                <div class="headeritems">
+                    <nav>
+                        <div class="nav_wrap">
+                            <div class="headeritem show aboutus">
+                                <a href="aboutus.html">關於我們</a>
+                            </div>
+                            <div class="headeritem news show">
+                                <a href="news.html" >最新消息</a>
+                            </div>
+                            <div class="headeritem schedule show">
+                                <a href="allproduct.html">行程推薦</a>
+                            </div>
+                            <div class="headeritem contactus show">
+                                <a href="#">聯絡我們</a>
+                            </div>
+                            <div class="headeritem login show">
+                                <a href="login.html">會員登入</a>
+                            </div>
+                        </div>
+                        <div class=" icons">
+                            <div class="headeritem search_icon">
+                                <a href="#" class="btn-search">
+                                <i class="fa-solid fa-magnifying-glass"></i></a>
+                            </div>
+                            <div class="headeritem cart_icon">
+                                <a href="carts.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                            </div>
+                            <div class="headeritem btn allsche">
+                                <a href="all_schedule.html">出團一覽</a>
+                            </div>
+                        </div>
+                    </nav>
+                    <label for="menu-switch" class="hb">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+            </header>
         </div>
-        <!-- 導覽列display flex -->
-        <div class="headeritems">
-            <nav>
-                <div class="headeritem aboutus">
-                    <a href="aboutus.html">關於我們</a>
-                </div>
-                <div class="headeritem news">
-                    <a href="news.html" >最新消息</a>
-                </div>
-                <div class="headeritem schedule">
-                    <a href="allproduct.html">行程推薦</a>
-                </div>
-                <div class="headeritem contactus">
-                    <a href="#">聯絡我們</a>
-                </div>
-                <div class="headeritem login">
-                    <a href="login.html">會員登入</a>
-                </div>
-                <div class="headeritem search_icon">
-                    <a href="#">
-                    <i class="fa-solid fa-magnifying-glass"></a></i>
-                </div>
-                <div class="headeritem cart_icon">
-                    <a href="carts.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                </div>
-                <div class="headeritem btn allsche">
-                    <a href="all_schedule.html">出團一覽</a>
-                </div>
-            </nav>
-        </div>
-    </header>
+    
     <div class="wave-container">
         <div class="wave"></div>
     </div>
@@ -263,7 +282,7 @@
                     <img src="img/milksea2.jpg" alt="">
                 </div>
                 <div class="rank_spot_txt">
-                    <div class="btn spot tag">宜蘭行程</div>
+                    <div class="btn spot tag yilanspot">宜蘭行程</div>
                     <div class="spot_content">
                         <ul>
                             <li>乘船出海，觀賞宜蘭龜山島海域常見的飛旋海豚與鯨魚</li>

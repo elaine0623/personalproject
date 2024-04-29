@@ -1,6 +1,7 @@
 .header_container{
     margin-bottom: 0;
 }
+
 .banner_box{
     margin: 0 auto;
     position: relative;
@@ -200,13 +201,67 @@
 .title_promote{
     margin-bottom: 30px;
 }
-.promote_card{
+.movement{
     box-shadow:4px 2px 10px 0px #eee;
     transform: perspective(300px) rotate(0deg);
     transition: 1s;
 }
-.promote_card:hover {
+.movement:hover {
     transform: perspective(300px) rotateY(360deg);
+}
+.movement_2:hover .flip-box-inner{
+    transform: rotateY(180deg);
+}
+
+.flip-box-back{
+    background-color: #003E60;
+    /* opacity: 30%; */
+    transform: rotateY(180deg);  
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.movement_2{
+    background-color: transparent;
+        width: 275px;
+        height: 300px;
+        /* border: 1px solid #f1f1f1; */
+        perspective: 1000px;
+}
+.flip-box-back .promote_txt{
+    background-color: #003E60;
+    /* opacity: 100%; */
+    padding: 0;
+    border-radius: 15px 15px 0 0;
+} 
+.flip-box-back .promote_txt ul{
+    display: block;
+    color: #fff;
+} 
+.flip-box-back .promote_txt ul li{
+    padding: 2px 0;
+}
+.flip-box-back .promote_txt ul li i{
+    padding: 0 3px 0 0;
+}
+
+.flip-box-inner {
+    position: relative; 
+    /* //設定為老爸(父元素)  前後卡片要用絕對元素 */
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.flip-box-front, .flip-box-back {
+position: absolute;
+width: 100%;
+height: 100%;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;  
+/* //詳解有解釋這個 隱藏背後內容的效果  CSS寫3D常見 */
 }
 .promote_pic{
     width: 275px;

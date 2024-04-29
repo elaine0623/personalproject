@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .section {
+            padding: 80px 0 50px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+        }
+        .card {
+            width: 280px;
+            margin: 10px;
+        }
+        .card img {
+            width: 100%;
+            vertical-align: top;
+        }
+        .card .txt {
+            padding: 10px;
+        }
+        /* --------------------------------------- */
+        .section-blog {
+            background-color: #aaf;
+        }
+        .section-service {
+            background-color: #faf;
+        }
+        /* --------------------------------------- */
+        .section-about .card {
+            position: relative;
+        }
+        .section-about .card .txt {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: flex-end;
+            color: #fff;
+        }
+        .section-blog .card {
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+        .section-service .card {
+            background-color: #ccc;
+        }
+        /* --------------------------------------- */
+
+        /* .sr-only {
+            position: absolute;
+            left: -10000px;
+        } */
+
+        /* .sr-only {
+            position: absolute;
+            z-index: -1;
+            color: transparent;
+        } */
+
+        /* .sr-only {
+            text-indent: 10000px;
+            overflow: hidden;
+        } */
+
+        /* .sr-only {
+            color: #fff;
+        } */
+
+        /* .sr-only {
+            font-size: 0;
+        } */
+
+        /* .sr-only {
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        } */
+
+        /* .sr-only {
+            opacity: 0;
+        } */
+
+        .sr-only {
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+        /* ----------------------------------------- */
+        .section-grid .container {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+        }
+        .section-grid .item {
+            background-color: #f00;
+            aspect-ratio: 1/1;
+        }
+        .section-grid .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            vertical-align: top;
+            /* display: none; */
+        }
+        .section-grid .item:nth-child(1),
+        .section-grid .item:nth-child(5) {
+            grid-column: span 2;
+            /* aspect-ratio: calc(100px + 10px)/ 100px; */
+            aspect-ratio: 2 / 1;
+
+        }
+        .section-grid .item:nth-child(2) {}
+        .section-grid .item:nth-child(3) {}
+        .section-grid .item:nth-child(4) {}
+        .section-grid .item:nth-child(5) {}
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>
+            <img src="https://fakeimg.pl/300x200/200" alt="yahoo" title="yahoo">
+        </h1>
+        
+        
+        <h1>
+            <img src="https://fakeimg.pl/300x200/200" alt="yahoo" title="yahoo">
+            <div class="sr-only">yahoo</div>
+        </h1>
+    </header>
+
+    <section class="section section-blog">
+        <div class="container">
+            <div class="card">
+                <div class="pic">
+                    <img src="https://fakeimg.pl/300x200/200">
+                </div>
+                <div class="txt">
+                    <div class="card-title">
+                        title
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, veritatis!</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="pic">
+                    <img src="https://fakeimg.pl/300x200/200">
+                </div>
+                <div class="txt">
+                    <div class="card-title">
+                        title
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, veritatis!</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="pic">
+                    <img src="https://fakeimg.pl/300x200/200">
+                </div>
+                <div class="txt">
+                    <div class="card-title">
+                        title
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, veritatis!</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="pic">
+                    <img src="https://fakeimg.pl/300x200/200">
+                </div>
+                <div class="txt">
+                    <div class="card-title">
+                        title
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, veritatis!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="section section-about">
+        <div class="container">
+            <div class="card">
+                <div class="pic">
+                    <img src="https://fakeimg.pl/300x200/200">
+                </div>
+                <div class="txt">
+                    <div class="card-title">
+                        title
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="pic">
+                    <img src="https://fakeimg.pl/300x200/200">
+                </div>
+                <div class="txt">
+                    <div class="card-title">
+                        title
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="pic">
+                    <img src="https://fakeimg.pl/300x200/200">
+                </div>
+                <div class="txt">
+                    <div class="card-title">
+                        title
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="pic">
+                    <img src="https://fakeimg.pl/300x200/200">
+                </div>
+                <div class="txt">
+                    <div class="card-title">
+                        title
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section-service">
+        <div class="container">
+            <div class="card">
+                <div class="pic">
+                    <img src="https://fakeimg.pl/300x200/200">
+                </div>
+                <div class="txt">
+                    <div class="card-title">
+                        title
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, veritatis!</p>
+                    <div class="price">
+                        $10000
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="pic">
+                    <img src="https://fakeimg.pl/300x200/200">
+                </div>
+                <div class="txt">
+                    <div class="card-title">
+                        title
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, veritatis!</p>
+                    <div class="price">
+                        $10000
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="pic">
+                    <img src="https://fakeimg.pl/300x200/200">
+                </div>
+                <div class="txt">
+                    <div class="card-title">
+                        title
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, veritatis!</p>
+                    <div class="price">
+                        $10000
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="pic">
+                    <img src="https://fakeimg.pl/300x200/200">
+                </div>
+                <div class="txt">
+                    <div class="card-title">
+                        title
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, veritatis!</p>
+                    <div class="price">
+                        $10000
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section section-grid">
+        <div class="container">
+            <div class="item">
+                <img src="https://picsum.photos/300/200/?random=11">
+            </div>
+            <div class="item">
+                <img src="https://picsum.photos/300/200/?random=10">
+            </div>
+            <div class="item">
+                <img src="https://picsum.photos/300/200/?random=13">
+            </div>
+            <div class="item">
+                <img src="https://picsum.photos/300/200/?random=15">
+            </div>
+            <div class="item">
+                <img src="https://picsum.photos/300/200/?random=17">
+            </div>
+            <div class="item">
+                <img src="https://picsum.photos/300/200/?random=19">
+            </div>
+        </div>
+    </section>
+
+
+    
+</body>
+</html>
