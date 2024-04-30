@@ -798,6 +798,9 @@ font-size: 20px;
 
 
 @media screen and (max-width: 767px) {
+  .header_container {
+    background-position: center;
+  }
   .rank_spot_container{
     width: 90%;
     margin: 0 auto;
@@ -842,6 +845,7 @@ font-size: 20px;
   }
   .rank_spot_txt{
     padding: 0;
+    padding-left: 35px;
   }
 
   .card_txt{
