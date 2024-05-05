@@ -42,7 +42,7 @@
 
 }
 .cart_group{
-    width: 960px;
+    width: 80%;
     margin: 0 auto ;
 
 }
@@ -126,12 +126,17 @@ input[type = "date"],input[type = "number"]{
     border: 3px #666;
     border-radius: 15px;
     padding: 5px;
+    text-align: end;
+    color: #003E60;
+    font-weight: 600;
+
 }
 input[type = "number"]{
     width: 120px;
 }
 ::-webkit-datetime-edit-fields-wrapper{
-    display: none;
+    /* display: none; */
+    color: #003E60;
 }
 .sum{
     text-align: center;
@@ -199,4 +204,10 @@ input[type = "number"]{
 .return{
     padding-left:325px ;
 
+}
+
+@media screen and (max-width:1200px){
+    .container{
+        width: 80%
+    }
 }

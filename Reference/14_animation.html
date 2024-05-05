@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+	<style>
+		#imgBoard{
+			width: 100px;
+			background-color: #aaa;
+			padding: 10px 30px;
+			position: absolute;
+			left: -130px;
+		}
+		.myPhoto{
+			width: 100px;
+		}
+	</style>
+	<script src="./js/jquery-3.7.1.js"></script>
+	<script src="./js/jquery-ui.js"></script>
+	<script>
+		$(function () {
+			// $('#imgBoard').mouseover(function(){}).mouseout(function(){})
+			// $('#imgBoard').hover(function(){},function(){})
+			$('#imgBoard').hover(function(){
+				// $(this).css('left','0px')
+				// 語法: $().animate({properties-CSS屬性}[, duration, easing, callback)
+				$(this).stop(true).animate({
+					left: 0,
+					// backgroundColor : 'red',
+				}, 1500,'easeInCubic')
+			},function(){
+				$(this).animate({
+					left: '-130px',	
+				}, 2000,'easeOutBounce')
+			})
+		})	
+	</script>
+</head>
+
+<body>
+	<h2>Mouseover the gray strip on the left edge.</h2>
+	<div id="imgBoard">
+		<img src="../images/washDrawing/011.JPG" class="myPhoto">
+		<img src="../images/washDrawing/001.JPG" class="myPhoto">
+		<img src="../images/washDrawing/007.JPG" class="myPhoto">
+		<img src="../images/washDrawing/021.JPG" class="myPhoto">
+		<img src="../images/washDrawing/008.JPG" class="myPhoto">
+		<img src="../images/washDrawing/037.JPG" class="myPhoto">
+		<img src="../images/washDrawing/013.JPG" class="myPhoto">
+		<img src="../images/washDrawing/010.JPG" class="myPhoto">
+	</div>
+</body>
+
+</html>

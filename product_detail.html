@@ -13,53 +13,65 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
 </head>
 <body>
-    <header>
-        <div class="header_container">
+    <div class="header_container">
+        <input type="checkbox" id="menu-switch">
+        <header>
             <div  class="logo">
                 <a href="index.html"><img src="LOGO.png" alt="logo"></a>
             </div>
             <div class="headeritems">
                 <nav>
-                    <div class="headeritem aboutus">
-                        <a href="aboutus.html">關於我們</a>
+                    <div class="nav_wrap">
+                        <div class="headeritem aboutus">
+                            <a href="aboutus.html">關於我們</a>
+                        </div>
+                        <div class="headeritem news">
+                            <a href="news.html">最新消息</a>
+                        </div>
+                        <div class="headeritem schedule">
+                            <a href="allproduct.html">行程推薦</a>
+                        </div>
+                        <div class="headeritem contactus">
+                            <a href="#">聯絡我們</a>
+                        </div>
+                        <div class="headeritem login">
+                            <a href="login.html">會員登入</a>
+                        </div>
                     </div>
-                    <div class="headeritem news">
-                        <a href="news.html">最新消息</a>
-                    </div>
-                    <div class="headeritem schedule">
-                        <a href="allproduct.html">行程推薦</a>
-                    </div>
-                    <div class="headeritem contactus">
-                        <a href="#">聯絡我們</a>
-                    </div>
-                    <div class="headeritem login">
-                        <a href="login.html">會員登入</a>
-                    </div>
-                    <div class="headeritem search_icon">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-                    <div class="headeritem cart_icon">
-                        <a href="carts.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                    </div>
-                    <div class="headeritem btn allsche">
-                        <a href="all_schedule.html">出團一覽</a>
+                    <div class=" icons">
+                        <div class="headeritem search_icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="headeritem cart_icon">
+                            <a href="carts.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        <div class="headeritem btn allsche">
+                            <a href="all_schedule.html">出團一覽</a>
+                        </div>
                     </div>
                 </nav>
+                <label for="menu-switch" class="hb">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
             </div>
-        </div>
+        </header>
+    </div>
         <div class="banner_box">
             <div class="banner">
                 <h2 class="banner_title">行程推薦</h2>
             </div>
             <img src="wave.png" alt="" class="wave">
         </div>
-    </header>
+    </div>
     <section class="product_container">
         <div class="container">
-            <h2 class="Serif_TC title_detail">龜山島牛奶海｜揭開牛奶海、無人島神秘面紗</h2>
+            <h2 class="Serif_TC title_detail">龜山島牛奶海｜<span>揭開牛奶海、無人島神秘面紗</span></h2>
             <div class="product_info_pic">
                 <img src="img/milksea2.jpg" alt="">
             </div>
@@ -112,7 +124,7 @@
                         <li>在地嚮導</li>
                     </ul>
                     <div class="signupnow btn">
-                        <a href="#">立即報名</a>
+                        <a href="" id="signNow">立即報名</a>
                     </div>
                 </div>
             </div>
@@ -252,6 +264,30 @@
             <p>本網站為緯育TibaMe前端工程師專業技術養成班第88期學員專題作品，本平台僅供學習、展示之用。
                 <br>參考網站｜https://ninetyroadtravel.com/｜https://baby-travel.jp/｜https://www.kkday.com/zh-tw/promo/Queensland｜https://gooone.help/about/</p>
         </div>
-    </section>   
+    </section>
+    <script>
+        $('#signNow').click(function(e){
+            e.preventDefault();//取消預設a連結會往上滑的行為
+            var str = '';//4建立空字串
+            var params = new window.URLSearchParams(window.location.search); //取得URL?後面的值
+            const id = params.get('id');//取得URI--id的值
+            const result = localStorage.getItem('cartItemid');//2將localStorage的值取出來給result
+            if(result == null){ //3需求：不能重複新增行程，故判斷result內是否有此id
+                localStorage.cartItemid=id //1建立cartItemid的金鑰 並存取id
+            }else{//4-1先將字串切割成陣列
+                if (id == null){
+                    return
+                }
+                str = result + '|' + id;
+                var dataArray = result.split('|');
+                if($.inArray(id, dataArray) == -1){//假設陣列裡沒有這個id
+                    localStorage.cartItemid=str//加入字串
+                    alert('行程加入成功')
+                }else{
+                    alert('您已添加購物車')
+                }
+            }
+        })
+    </script>
 </body>
 </html>

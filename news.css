@@ -10,7 +10,7 @@
 
 }
 .banner{
-    width: 1200px;
+    max-width: 1200px;
     /* height:60vh; */
     height: 400px;
     background-image: url(img/banner.jpg) ;
@@ -31,15 +31,16 @@
 .wave{
     position: absolute;
     bottom:0px;
+    width: 100%;
 }
 .container{
-    width: 1200px;
+    max-width: 1200px;
     margin:0 auto 150px;
     text-align: center;
     box-sizing: border-box;
 }
 .card_pic{
-    width: 300px;
+    width: 25%;
 }
 .card_pic img{
     width: 100%;
@@ -161,7 +162,7 @@
     background-color: #003E60;
     color:#fff;
 }
-.btn{
+.btn1{
     border-radius: 25px;
     padding: 10px 20px;
     text-align: center;
@@ -170,12 +171,16 @@
 .title_reason{
     margin-bottom: 30px;
 }
-
-.reason_list_pic{
+.reasoncard{
     width: 160px;
+    margin: 0 auto;
+
+}
+.reason_list_pic{
+    width: 100%;
     margin-bottom: 10px;
 }
-.reason_list_pic img{
+.reason_list_txt,.reason_list_pic img{
     width: 100%;
 }
 
@@ -201,14 +206,14 @@
 .title_promote{
     margin-bottom: 30px;
 }
-.movement{
+/* .movement{
     box-shadow:4px 2px 10px 0px #eee;
     transform: perspective(300px) rotate(0deg);
     transition: 1s;
 }
 .movement:hover {
     transform: perspective(300px) rotateY(360deg);
-}
+} */
 .movement_2:hover .flip-box-inner{
     transform: rotateY(180deg);
 }
@@ -224,10 +229,11 @@
 }
 .movement_2{
     background-color: transparent;
-        width: 275px;
-        height: 300px;
-        /* border: 1px solid #f1f1f1; */
-        perspective: 1000px;
+    width: 275px;
+    height: 300px;
+    /* border: 1px solid #f1f1f1; */
+    perspective: 1000px;
+    margin: 0 auto;
 }
 .flip-box-back .promote_txt{
     background-color: #003E60;
@@ -298,3 +304,57 @@ backface-visibility: hidden;
     text-align: end;
     letter-spacing: 0;
 }
+
+@media screen and (max-width:1200px){
+    .banner_box{
+        width: 90%;
+    };
+    .container{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .promote_list{
+        display: flex;
+        flex-direction: column;
+    }
+}
+/* @media screen and (max-width:992px){
+
+
+
+}
+@media screen and (max-width:768px){
+  
+} */
+/*@media screen and (max-width:576px){
+  
+}*/
+@media screen and (max-width:412px){
+    .Serif_TC{
+        font-size: 20px;
+    }
+    .banner{
+        width: 100%;
+        height: 60vh;
+        margin-top: 15px;
+    }
+    .banner_box{
+        width: 100%;
+        margin-bottom:60px ;
+    }
+    .banner_title{
+        font-size: clamp(24px,24px,32px);
+        padding: 15px 35px;
+    }
+    .info_content{
+        font-size: 12px;
+        width: 65%;
+        bottom:-80px
+    }
+    .card_list{
+        gap:15px
+    }
+    .cp, .cp_btn{
+        width: 75%;
+    }
+} 

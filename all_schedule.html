@@ -15,43 +15,53 @@
         <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
     </head>
 <body>
-    <header>
-        <div class="header_box">
+    <div class="header_container">
+        <input type="checkbox" id="menu-switch">
+        <header>
             <div  class="logo">
                 <a href="index.html"><img src="LOGO_w.png" alt="logo"></a>
             </div>
             <div class="headeritems">
                 <nav>
-                    <div class="headeritem aboutus">
-                        <a href="aboutus.html">關於我們</a>
+                    <div class="nav_wrap">
+                        <div class="headeritem aboutus insidehb">
+                            <a href="aboutus.html">關於我們</a>
+                        </div>
+                        <div class="headeritem news insidehb">
+                            <a href="news.html">最新消息</a>
+                        </div>
+                        <div class="headeritem schedule insidehb">
+                            <a href="allproduct.html">行程推薦</a>
+                        </div>
+                        <div class="headeritem contactus insidehb">
+                            <a href="#">聯絡我們</a>
+                        </div>
+                        <div class="headeritem login insidehb">
+                            <a href="login.html">會員登入</a>
+                        </div>
                     </div>
-                    <div class="headeritem news">
-                        <a href="news.html">最新消息</a>
-                    </div>
-                    <div class="headeritem schedule">
-                        <a href="allproduct.html">行程推薦</a>
-                    </div>
-                    <div class="headeritem contactus">
-                        <a href="#">聯絡我們</a>
-                    </div>
-                    <div class="headeritem login">
-                        <a href="login.html">會員登入</a>
-                    </div>
-                    <div class="headeritem search_icon">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-                    <div class="headeritem cart_icon">
-                        <a href="carts.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                    </div>
-                    <div class="headeritem btn allsche">
-                        <a href="#" >出團一覽</a>
+                    <div class="icons">
+                        <div class="headeritem search_icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="headeritem cart_icon">
+                            <a href="carts.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        <div class="headeritem btn allsche">
+                            <a href="#" >出團一覽</a>
+                        </div>
                     </div>
                 </nav>
+                <label for="menu-switch" class="hb">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
             </div>
-            <h2 class="banner_title noto-serif">出團一覽</h2>
-            <img src="wave.png" alt="" class="wave">
-        </div>
-    </header>
+        </header>
+        <h2 class="banner_title noto-serif">出團一覽</h2>
+        <img src="wave.png" alt="" class="wave">
+    </div>
     <section class="all_sche_content">
         <div class="container">
             <!-- a標籤的錨點功能+scroll-behavior -->
@@ -63,76 +73,94 @@
             </div>
             <div class="sche_all">
                 <div class="sche_list">
-                    <div class="sche_name">龜山島牛奶海</div>
+                    <div class="sche_name"><a href="./product_detail.html">龜山島牛奶海</a></div>
                     <div class="date">2024/4/2-2024/4/4</div>
-                    <div class="price">6,000元</div>
-                    <div id="April">清明連假</div>
-                    <div class="status">已額滿，開放候補</div>
-                    <div class="moredetail"><a href="#">詳細行程</a></div>
+                    <div class="price">&nbsp6,000元</div>
+                    <div id="April" class="festival">清明連假</div>
+                    <div class="status_container">
+                        <div class="status full">已額滿，開放候補</div>
+                    </div>
+                    <div class="moredetail"><a href="/product_detail.html?id=1">詳細行程</a></div>
                 </div>
                 <div class="sche_list">
-                    <div class="sche_name">台北草山旅 </div>
+                    <div class="sche_name"><a href="#">台北&nbsp草山旅&nbsp&nbsp</a></div>
                     <div class="date">2024/4/1-2024/4/3</div>
-                    <div class="price">4,500元</div>
-                    <div >清明連假</div>
-                    <div class="status">保證出團</div>
-                    <div class="moredetail"><a href="#">詳細行程</a></div>
+                    <div class="price">&nbsp4,500元</div>
+                    <div class="festival">清明連假</div>
+                    <div class="status_container">
+                        <div class="status available ">保證出團</div>
+                    </div>
+                    <div class="moredetail"><a href="/product_detail.html?id=2">詳細行程</a></div>
                 </div>
                 <div class="sche_list">
-                    <div class="sche_name">台中高美漫遊</div>
+                    <div class="sche_name"><a href="#">台中高美漫遊</a></div>
                     <div class="date">2024/4/3-2024/4/6</div>
-                    <div class="price">6,000元</div>
-                    <div id="May">清明連假</div>
-                    <div class="status">最後一名</div>
-                    <div class="moredetail"><a href="#">詳細行程</a></div>
+                    <div class="price">&nbsp6,000元</div>
+                    <div id="May" class="festival">清明連假</div>
+                    <div class="status_container">
+                    <div class="status lastone">最後一名</div>
+                </div>
+                    <div class="moredetail"><a href="/product_detail.html?id=3">詳細行程</a></div>
                 </div>
                 <div class="sche_list">
-                    <div class="sche_name orange">龜山島牛奶海</div>
+                    <div class="sche_name orange"><a href="./product_detail.html">龜山島牛奶海</a></div>
                     <div class="date">2024/5/2-2024/5/4</div>
-                    <div class="price">6,000元</div>
-                    <div >五月平日</div>
-                    <div class="status">保證出團</div>
-                    <div class="moredetail"><a href="#">詳細行程</a></div>
+                    <div class="price">&nbsp6,000元</div>
+                    <div class="festival">五月平日</div>
+                    <div class="status_container">
+                        <div class="status available ">保證出團</div>
+                    </div>
+                    <div class="moredetail"><a href="/product_detail.html?id=4">詳細行程</a></div>
                 </div>
                 <div class="sche_list">
-                    <div class="sche_name orange">國境之南墾丁</div>
+                    <div class="sche_name orange"><a href="#">國境之南墾丁</a></div>
                     <div class="date">2024/5/3-2024/5/7</div>
                     <div class="price">16,000元</div>
-                    <div id="June">五月平日</div>
-                    <div class="status">已額滿，開放候補</div>
-                    <div class="moredetail"><a href="#">詳細行程</a></div>
+                    <div id="June" class="festival">五月平日</div>
+                    <div class="status_container">
+                        <div class="status full">已額滿，開放候補</div>
+                    </div>
+                    <div class="moredetail"><a href="/product_detail.html?id=5">詳細行程</a></div>
                 </div>
                 <div class="sche_list">
-                    <div class="sche_name">台北草山旅</div>
+                    <div class="sche_name"><a href="#">台北&nbsp草山旅&nbsp&nbsp</a></div>
                     <div class="date">2024/6/2-2024/6/4</div>
-                    <div class="price">5,000元</div>
-                    <div >端午連假</div>
-                    <div class="status">已額滿，開放候補</div>
-                    <div class="moredetail"><a href="#">詳細行程</a></div>
+                    <div class="price">&nbsp5,000元</div>
+                    <div class="festival">端午連假</div>
+                    <div class="status_container">
+                        <div class="status full">&nbsp已額滿，開放候補</div>
+                    </div>
+                    <div class="moredetail"><a href="/product_detail.html?id=6">詳細行程</a></div>
                 </div>
                 <div class="sche_list">
-                    <div class="sche_name">龜山島牛奶海</div>
+                    <div class="sche_name"><a href="./product_detail.html">龜山島牛奶海</a></div>
                     <div class="date">2024/6/1-2024/6/3</div>
-                    <div class="price">7,000元</div>
-                    <div >端午連假</div>
-                    <div class="status">保證出團</div>
-                    <div class="moredetail"><a href="#">詳細行程</a></div>
+                    <div class="price">&nbsp7,000元</div>
+                    <div class="festival">端午連假</div>
+                    <div class="status_container">
+                        <div class="status available ">保證出團</div>
+                    </div>
+                    <div class="moredetail"><a href="/product_detail.html?id=7">詳細行程</a></div>
                 </div>
                 <div class="sche_list">
-                    <div class="sche_name">台北草山旅</div>
-                    <div class="date">2024/6/2-2024/6/4</div>
-                    <div class="price">5,000元</div>
-                    <div>端午連假</div>
-                    <div class="status">已額滿，開放候補</div>
-                    <div class="moredetail"><a href="#">詳細行程</a></div>
+                    <div class="sche_name"><a href="#">台北&nbsp草山旅&nbsp&nbsp</a></div>
+                    <div class="date">2024/6/3-2024/6/5</div>
+                    <div class="price">&nbsp5,000元</div>
+                    <div class="festival">端午連假</div>
+                    <div class="status_container">
+                        <div class="status full">已額滿，開放候補</div>
+                    </div>
+                    <div class="moredetail"><a href="/product_detail.html?id=8">詳細行程</a></div>
                 </div>
                 <div class="sche_list">
-                    <div class="sche_name orange">龜山島牛奶海</div>
+                    <div class="sche_name orange"><a href="./product_detail.html">龜山島牛奶海</a></div>
                     <div class="date">2024/7/2-2024/7/4</div>
-                    <div class="price">8,000元</div>
-                    <div id="July">七月暑假</div>
-                    <div class="status">保證出團</div>
-                    <div class="moredetail"><a href="#">詳細行程</a></div>
+                    <div class="price">&nbsp8,000元</div>
+                    <div id="July" class="festival">七月暑假</div>
+                    <div class="status_container">
+                        <div class="status available ">保證出團</div>
+                    </div>
+                    <div class="moredetail"><a href="/product_detail.html?id=9">詳細行程</a></div>
                 </div>
             </div>
         </div>

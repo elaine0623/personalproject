@@ -13,41 +13,56 @@
     <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC&display=swap" rel="stylesheet">
     <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <!-- owl.carousel -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"></script>
 </head>
 <body>
 
-    <div class="header_container">  
+    <div class="header_container">
+        <input type="checkbox" id="menu-switch">  
         <header>
             <div  class="logo">
                 <a href="index.html"><img src="LOGO.png" alt="logo"></a>
             </div>
             <div class="headeritems">
                 <nav>
-                    <div class="headeritem aboutus">
-                        <a href="aboutus.html">關於我們</a>
+                    <div class="nav_wrap">
+                        <div class="headeritem aboutus">
+                            <a href="aboutus.html">關於我們</a>
+                        </div>
+                        <div class="headeritem news">
+                            <a href="#">最新消息</a>
+                        </div>
+                        <div class="headeritem schedule">
+                            <a href="allproduct.html">行程推薦</a>
+                        </div>
+                        <div class="headeritem contactus">
+                            <a href="#">聯絡我們</a>
+                        </div>
+                        <div class="headeritem login">
+                            <a href="login.html">會員登入</a>
+                        </div>
                     </div>
-                    <div class="headeritem news">
-                        <a href="#">最新消息</a>
-                    </div>
-                    <div class="headeritem schedule">
-                        <a href="allproduct.html">行程推薦</a>
-                    </div>
-                    <div class="headeritem contactus">
-                        <a href="#">聯絡我們</a>
-                    </div>
-                    <div class="headeritem login">
-                        <a href="login.html">會員登入</a>
-                    </div>
-                    <div class="headeritem search_icon">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-                    <div class="headeritem cart_icon">
-                        <a href="carts.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                    </div>
-                    <div class="headeritem btn allsche">
-                        <a href="all_schedule.html">出團一覽</a>
+                    <div class="icons">
+                        <div class="headeritem search_icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="headeritem cart_icon">
+                            <a href="carts.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        <div class="headeritem btn allsche">
+                            <a href="all_schedule.html">出團一覽</a>
+                        </div>
                     </div>
                 </nav>
+                <label for="menu-switch" class="hb">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
             </div>
         </header>
     </div>       
@@ -85,7 +100,7 @@
                 </div>
                 <div class="cp_btn">
                     <div class="btn">
-                        <a href="#" class="btn">立即領取</a>
+                        <a href="#" class="btn1">立即領取</a>
                     </div>
                 </div>
             </div>
@@ -94,7 +109,7 @@
     <section class="visiting_reason">
         <div class="container">
             <h2 class="Serif_TC title_reason">必訪陽明山的五個理由</h2>
-            <div class="reason_list">
+            <div class="reason_list owl-carousel owl-theme">
                 <div class="reasoncard">
                     <div class="reason_list_pic">
                         <img src="img/reason1.png" alt="" class="circlesvg1">
@@ -144,17 +159,33 @@
             <!-- 老師建議卡片動畫可以改成翻面後有簡介的資訊 -->
             <h2 class="Serif_TC title_promote">探索大自然的美&美食推薦</h2>
             <div class="promote_list">
-                <div class="movement">
-                    <div class="promote_card">
-                        <div class="promote_pic">
-                            <img src="img/promote1.webp" alt="">
+                <div class="movement_2">
+                    <div class="flip-box-inner">
+                        <div class="promote_card flip-box-front">
+                            <div class="promote_pic">
+                                <img src="img/promote1.webp" alt="">
+                            </div>
+                            <div class="promote_txt">
+                                <h3>農場參觀行程(含賞花)</h3>
+                                <p>4.5★(120) ｜ 200+已訂購</p>
+                                <p class="price">TWD $ 500</p>
+                            </div>
                         </div>
-                        <div class="promote_txt">
-                            <h3>農場參觀行程(含賞花)</h3>
-                            <p>4.5★(120) ｜ 200+已訂購</p>
-                            <p class="price">TWD $ 500</p>
+                        <div class="flip-box-back">
+                            <div class="promote_txt">
+                                <ul>
+                                    <li>行程亮點</li>
+                                    <li>
+                                        <i class="fa-solid fa-van-shuttle"></i>提供接駁</li>
+                                    <li><i class="fa-solid fa-microphone"></i>專業導覽員解說
+                                    </li>
+                                    <li><i class="fa-brands fa-pagelines"></i>享受大自然</li>
+                                    <li><i class="fa-solid fa-mountain"></i>台北第一高峰</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
+
                 </div>
                 <div class="movement_2">
                     <div class="flip-box-inner">
@@ -183,24 +214,58 @@
                         </div>
                     </div>
                 </div>
-                <div class="promote_card">
-                    <div class="promote_pic">
-                        <img src="img/food-fotor.png" alt="">
-                    </div>
-                    <div class="promote_txt">
-                        <h3>在地推薦美食套餐預定</h3>
-                        <p>4.2★(2388) ｜ 3000+已訂購</p>
-                        <p class="price">TWD $ 1,500</p>
+                <div class="movement_2">
+                    <div class="flip-box-inner">
+                        <div class="promote_card flip-box-front">
+                            <div class="promote_pic">
+                                <img src="img/food-fotor.png" alt="">
+                            </div>
+                            <div class="promote_txt">
+                                <h3>在地推薦美食套餐預定</h3>
+                                <p>4.2★(2388) ｜ 3000+已訂購</p>
+                                <p class="price">TWD $ 1,500</p>
+                            </div>
+                        </div>
+                        <div class="flip-box-back">
+                            <div class="promote_txt">
+                                <ul>
+                                    <li>行程亮點</li>
+                                    <li>
+                                        <i class="fa-solid fa-van-shuttle"></i>提供接駁</li>
+                                    <li><i class="fa-solid fa-microphone"></i>專業導覽員解說
+                                    </li>
+                                    <li><i class="fa-brands fa-pagelines"></i>享受大自然</li>
+                                    <li><i class="fa-solid fa-mountain"></i>台北第一高峰</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="promote_card">
-                    <div class="promote_pic">
-                        <img src="img/flower.jpg" alt="">
-                    </div>
-                    <div class="promote_txt">
-                        <h3>花季專業攝影媒合服務</h3>
-                        <p>4.9★(35) ｜ 50+已訂購</p>
-                        <p class="price">TWD $ 2,500</p>
+                <div class="movement_2">
+                    <div class="flip-box-inner">
+                        <div class="promote_card flip-box-front">
+                            <div class="promote_pic">
+                                <img src="img/flower.jpg" alt="">
+                            </div>
+                            <div class="promote_txt">
+                                <h3>花季專業攝影媒合服務</h3>
+                                <p>4.9★(35) ｜ 50+已訂購</p>
+                                <p class="price">TWD $ 2,500</p>
+                            </div>
+                        </div>
+                        <div class="flip-box-back">
+                            <div class="promote_txt">
+                                <ul>
+                                    <li>行程亮點</li>
+                                    <li>
+                                        <i class="fa-solid fa-van-shuttle"></i>提供接駁</li>
+                                    <li><i class="fa-solid fa-microphone"></i>專業導覽員解說
+                                    </li>
+                                    <li><i class="fa-brands fa-pagelines"></i>享受大自然</li>
+                                    <li><i class="fa-solid fa-mountain"></i>台北第一高峰</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -240,5 +305,24 @@
                 <br>參考網站｜https://ninetyroadtravel.com/｜https://baby-travel.jp/｜https://www.kkday.com/zh-tw/promo/Queensland｜https://gooone.help/about/</p>
         </div>
     </section>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+            }
+        
+        })
+    </script>
 </body>
 </html>

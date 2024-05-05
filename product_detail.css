@@ -8,7 +8,7 @@
     margin-bottom: 80px;
 }
 .banner{
-    width: 1200px;
+    max-width: 1200px;
     /* height:60vh; */
     height: 400px;
     background-image: url(img/banner.png) ;
@@ -32,9 +32,11 @@
 .wave{
     position: absolute;
     bottom:0px;
+    width: 100%;
+
 }
 .container{
-    width: 1200px;
+    max-width: 1200px;
     margin:0 auto 150px;
     /* text-align: center; */
 }
@@ -53,7 +55,7 @@
     letter-spacing: 1.8px;
 }
 .product_info_pic{
-    width: 800px;
+    width: 66.666666%;
     margin: 0 auto;
     border-radius: 15px;
     box-shadow:4px 2px 8px 0px #eee;
@@ -66,7 +68,7 @@
     vertical-align: top;
 }
 .product_info{
-    width: 420px;
+    width: 35%;
 }
 .product_feature{
     display: flex;
@@ -310,4 +312,130 @@
 }
 .card{
     box-shadow:4px 2px 8px 0px #eee;
+}
+
+@media screen and (max-width:1200px){
+    .banner_box{
+        width: 90%;
+    };
+    .container{
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:767px){
+    .flex_box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    .product_info{
+        width: 50%;
+        order: 1;
+        margin: auto;
+    }
+    .feature{
+        margin-right: 5px;
+        font-size: 12px;
+        line-height: normal;
+        word-break: keep-all;
+    }
+    .detail_info{
+        width: 50%;
+        margin: auto;
+        box-sizing: border-box;
+        margin-bottom: 35px;
+    }
+    .other_cardlist{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width:275px
+    }
+    .yamin_txt, .kenting_txt, .taichung_txt{
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+
+@media screen and (max-width:412px){
+    .container{
+        margin-bottom: 80px;
+    }
+    .product_info_pic{
+        width: 80%;
+    }
+    .Serif_TC{
+        font-size: 20px;
+    }
+    .banner{
+        width: 100%;
+        height: 60vh;
+        margin-top: 15px;
+    }
+    .banner_box{
+        margin-bottom:80px;
+        width: 100%;
+    }
+    .banner_title{
+        font-size: clamp(24px,24px,32px);
+        padding: 15px 35px;
+    }
+    .detail_info{
+        width: 80%;
+        margin: auto;
+        box-sizing: border-box;
+        margin-bottom: 35px;
+        padding: 20px 40px;
+    }
+    .signupnow{
+        position: absolute;
+        left: 144px;
+        bottom: 30px;
+    }
+    .signupnow a{
+        padding: 9px 16px;
+    }
+    .title_detail{
+
+        margin-bottom: 25px;
+        letter-spacing: 1.4px;
+    }
+    .title_detail span{
+        display: block;
+        padding-top: 5px    ;
+    }
+    .product_info{
+        width: 80%;
+    }
+    .li_style{
+        list-style-position: outside;
+    }
+    .day{
+        width: 40px;
+        height: 40px;
+        font-size: 13px;
+        padding: 3px;
+    }
+    .spot_card_list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+    .spot_card_pic{
+        width: 100%;
+        height: 150px;
+    }
+    .spot_card_txt{
+        width: 100%;
+        font-size: 13px;
+        line-height: 1.8em;
+        padding: 15px;
+    }
 }

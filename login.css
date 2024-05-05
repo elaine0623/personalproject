@@ -4,7 +4,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     /* background-position: center; */
-    background-size: contain;
+    background-size: cover;
 }
 .headeritem a{
     color: #000;
@@ -25,13 +25,14 @@ nav .cart_icon a{
 }
 .container{
     text-align: center;
+    max-width: 1200px;
 }
 .login_txt{
     width: 35%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    margin-bottom: 50px;
+    margin-bottom: 5%;
 }
 .login_txt_accout, .login_txt_psw{
     color:#FFF;
@@ -86,10 +87,13 @@ input[type = "text"]{
     font-size: 14px;
     letter-spacing: 2px;
     color:#fff ;
-    margin-top: 80px;
-    position: relative;
+    margin: 80px auto 0;
+    width: 60%;
+    border-top: 1.5px solid;
+    padding-top: 20px;
+
 }
-.register::before{
+/* .register::before{
     content: '';
     position: absolute;
     width: 500px;
@@ -97,4 +101,45 @@ input[type = "text"]{
     background-color: #fff;
     top: -22px;
     left: 400px;
+} */
+
+
+
+
+
+@media screen and (max-width:1200px){
+    .body{
+        background-size: cover;
+        background-position: 50% 80%;
+    }
+    .register::before{
+        width:100% ;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .title_login{
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+    .login_txt{
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    .login_txt_accout, .login_txt_psw{
+        font-size: 14px;
+    }
+    input[type = "text"]{
+        margin-bottom: 15px;
+    }
+    .register{
+        width: 80%;
+    }
+    
+}
+
+@media screen and (max-width: 412px) {
+
+    
 }

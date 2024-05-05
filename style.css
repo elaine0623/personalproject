@@ -26,8 +26,10 @@ body{
     display: none;
 }
 header{
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  /* flex-wrap: wrap;  */
+  justify-content: space-between;
+  padding: 0 15px;
 }
 .headeritems nav{
     display: flex;
@@ -141,21 +143,37 @@ header{
         top: -18px;
         right: -95px;
         background-color: rgb(238, 238, 238);
-        padding: 15px;
         color: rgb(0, 0, 0);
-        width: 357%;
+        width: 150%;
+        z-index: 1;
+        gap:0
+    }
+    .nav_wrap .insidehb a{
+        font-size: 24px;
     }
     .headeritems nav{
         position:relative;
     }
-    .headeritem{
-        margin: 5px 0px;
-        margin-bottom: 14px;
+    .insidehb{
+        width: 100%;
+        margin: 0;
+        /* /* font-size: 16px; */
+    } */
+    .insidehb a{
+        display: block;
     }
+
     #menu-switch:checked~ header .headeritems nav .nav_wrap{
         display: flex;
         flex-direction: column;
+        height: 100vh;
+
+        align-items: center;
+        justify-content: space-evenly;
     }
+    /* .aboutus,.news,.schedule,.contactus,.login{
+        border-bottom: 1px solid #fff;
+    } */
 }
 
 
