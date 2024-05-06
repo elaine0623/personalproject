@@ -6,6 +6,7 @@
 //             checkboxes[i].checked = selected;
 //     }
 // })
+//設定全選及全部取消功能
 function toggle(toggle_status) {
     var checkboxes = document.querySelectorAll('.item_check');
     console.log(toggle_status)
@@ -16,11 +17,13 @@ function toggle(toggle_status) {
     }
 }
 
+//取得本機資料庫加入購物車項目
 const shoplist = (localStorage.getItem('cartItemid')).split('|');
 const selectData = shoplist.slice();
 console.log(selectData)
 
 // const selectData = [1,2,3,4,5,6,7,8,9];
+//存入後端資料
 var travelData = [
     {
         id: 1,
@@ -89,22 +92,27 @@ var travelData = [
 let sum = 0;
 for(let i = 0;i<selectData.length;i++){
     let item = travelData.find(item => item.id == selectData[i]); //找到商品的ID指派給item
-    $('#allData').append(`<div class="items">
-                    <div class="checkbox">
-                        <input type="checkbox"class="item_check" checked>
+    $('#allData').append(`<div class="inner">
+                    <div class="basic_info">
+                        <div class="checkbox">
+                            <input type="checkbox"class="item_check" checked>
+                        </div>
+                        <div class="items_pic">
+                            <img src="${item.pic}" alt="">
+                        </div>
+                        <p>${item.name}</p>
+                        </div>
+                    <div class="items">
+                        <div class="date">
+                            <label for="selectdate">選擇日期</label>
+                            <input type="text" id="datepicker_${item.id}" class="datepicker">
+                        </div>
+                        <div class="counts">
+                            <label for="selectpeople">選擇人數</label>
+                            <input type="number" step="1" id="selectpeople_${item.id}" min="1" max="15" value="1" onchange="selectNum(${item.id})">
+                        </div>
                     </div>
-                    <div class="items_pic">
-                        <img src="${item.pic}" alt="">
-                    </div>
-                    <p>${item.name}</p>
-                    <div class="date">
-                        <label for="selectdate">選擇日期</label>
-                        <input type="text" id="datepicker_${item.id}" class="datepicker">
-                    </div>
-                    <div class="counts">
-                        <label for="selectpeople">選擇人數</label>
-                        <input type="number" step="1" id="selectpeople_${item.id}" min="1" max="15" value="1" onchange="selectNum(${item.id})">
-                    </div>
+                </div>
                 </div>
                 <div class="sum">
                         TWD $ <span class="total" id="total_${item.id}"></span>

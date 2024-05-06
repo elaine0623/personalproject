@@ -187,9 +187,9 @@ html {
     .btn_list{
         width: 100%;
     }
-    .festival, .moredetail{
+    /* .festival, .moredetail{
         display: none;
-    }
+    } */
     .btn_list a{
         margin: 5px 10px;
     }
