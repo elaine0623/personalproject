@@ -87,10 +87,11 @@ input[type = "text"]{
     font-size: 14px;
     letter-spacing: 2px;
     color:#fff ;
-    margin: 80px auto 0;
+    margin: 80px auto 80px;
     width: 60%;
     border-top: 1.5px solid;
     padding-top: 20px;
+
 
 }
 /* .register::before{

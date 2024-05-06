@@ -51,6 +51,7 @@
 .title_cart{
     font-size: 24px;
     margin-bottom: 50px;
+    margin-top: 15px;
     padding: 30px 0px 30px 70px;
     position: relative;
     letter-spacing: 1.8px;
@@ -148,9 +149,9 @@ input[type = "number"]{
     color: #003E60;
 }
 .sum{
-    text-align: center;
+    text-align: end;
     font-family: "Noto Sans TC";
-    padding-left: 250px;
+    /* padding-left: 250px; */
 }
 .cart_group{
     background-color: #fff;
@@ -168,7 +169,7 @@ input[type = "number"]{
     line-height:1.8em;  
     letter-spacing: 1.5px;
     font-family:"Noto Sans TC";
-    padding: 15px;
+    /* padding: 15px; */
     font-weight: 400;
 }
 .carts_info ::after{
@@ -236,5 +237,33 @@ input[type = "number"]{
     }
     .card{
         height: 100%;
+    }
+}
+
+@media screen and (max-width:412px){
+    .container{
+        width:100%;
+    }
+    .title_cart::after{
+        right: 22px;
+    }
+    .items_pic{
+        width: 230px;
+        height: 145px;
+    }
+    .sum{
+        padding: 15px;
+    }
+    .selected{
+        padding: 0;
+    }
+    .basic_info, .items{
+        gap: 8px
+    }
+    .carts_info ::after{
+        right: 22px;
+    }
+    .total{
+        padding-right: 15px;
     }
 }

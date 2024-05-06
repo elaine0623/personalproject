@@ -181,15 +181,19 @@ html {
 
 @media screen and (max-width: 767px) {
     .container{
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
+    }
+    .sche_list{
+        width: 100%;
+        gap: 10px;
     }
     .btn_list{
         width: 100%;
     }
-    /* .festival, .moredetail{
+    .festival, .price{
         display: none;
-    } */
+    }
     .btn_list a{
         margin: 5px 10px;
     }
@@ -201,17 +205,32 @@ html {
     }
     .card{
         height: 100%;
+        width: 90%;
+        margin: 0 auto;
     }
     .yamin_pic,.kenting_pic, .taichung_pic{
         width: 100%;
         height: 55%;
     } 
+    .sche_all > div{
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+    .sche_name{
+        padding: 18px 5px;
+    }
+    .status_container{
+        flex-grow: 0.8;
+    }
 }
 
 @media screen and (max-width: 576px) {
     .container{
         width: 96%;
         margin: 0 auto;
+    }
+    .sche_all > div{
+        font-size: 12px;
     }
     .banner_title{
         font-size: clamp(16px,20px,28px);
@@ -222,5 +241,18 @@ html {
         font-size: 14px;
         text-wrap: nowrap;
         padding: 10px 10px;
+    }
+    .status,.moredetail a{
+        font-size: 12px;
+    }
+    .date{
+        flex-shrink: 4;
+    }
+    .moredetail{
+        max-width: 100px;
+        width: 100%;
+    }
+    .moredetail a{
+        margin:5px 6px;    
     }
 }

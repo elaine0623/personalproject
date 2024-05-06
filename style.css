@@ -92,6 +92,17 @@ header{
     color:#000;
     font-family:'Noto Sans TC' ;
     letter-spacing: 1.5px;
+    display: block;
+}
+#shopItems{
+    /* display: none; */
+    border: 1px solid #FF9A66;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    top: -24px;
+    right: -17px;
 }
 .btn{
     border-radius: 25px;
@@ -107,6 +118,9 @@ header{
     letter-spacing: 2px;
 }
 @media screen and (max-width: 992px) {
+    .insidehb a{
+        font-size: 20px;
+    }
     .headeritem a{
         font-size: 13px;
     }
@@ -149,7 +163,7 @@ header{
         gap:0
     }
     .nav_wrap .insidehb a{
-        font-size: 24px;
+        font-size: 20px;
     }
     .headeritems nav{
         position:relative;
