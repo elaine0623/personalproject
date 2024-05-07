@@ -48,6 +48,7 @@
                         </div>
                         <div class="headeritem cart_icon">
                             <a href="carts.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <div id="shopItems"></div>
                         </div>
                         <div class="headeritem btn allsche">
                             <a href="all_schedule.html">出團一覽</a>
@@ -391,6 +392,8 @@
                     alert('您已添加購物車')
                 }
             }
+            let num = (localStorage.getItem('cartItemid')).split('|');
+            $('#shopItems').show().text(num.length);
         })
     </script>
     <script>

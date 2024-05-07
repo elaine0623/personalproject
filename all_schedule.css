@@ -222,6 +222,9 @@ html {
     .status_container{
         flex-grow: 0.8;
     }
+    .goTopBtn{
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width: 576px) {

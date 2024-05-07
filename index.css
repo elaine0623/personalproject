@@ -289,6 +289,11 @@ header{
   gap:25px;
   justify-content: center;
 }
+.card_item a{
+  text-decoration: none;
+  color: #FFF;
+}
+
 .pic{
   width: 340px;
 }

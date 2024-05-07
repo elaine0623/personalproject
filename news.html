@@ -270,6 +270,11 @@
                 </div>
             </div>
         </div>
+        <div class="goTop hide">
+            <a href="#" class="goTopBtn jq-goTop">
+                <i class="fas fa-arrow-alt-circle-up fa-3x"></i>
+            </a>
+        </div>
     </section>
     <section class="footer">
         <div class="footer_container">
@@ -323,6 +328,26 @@
             }
         
         })
+    </script>
+    <script>
+        $(".jq-goTop").click(function (e) {
+            e.preventDefault();
+            $("html,body").animate(
+            {
+                scrollTop: 0,
+            },
+            600
+            );
+        });
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 200) {
+                if ($(".goTop").hasClass("hide")) {
+                    $(".goTop").toggleClass("hide");
+                }
+            }else {
+                $(".goTop").addClass("hide");
+            }
+        });
     </script>
 </body>
 </html>

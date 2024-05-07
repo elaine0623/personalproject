@@ -17,6 +17,7 @@
     background-position: 50% 75%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed ;
     text-align: center;
     display: flex;
     align-items: center;

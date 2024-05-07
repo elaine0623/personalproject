@@ -13,6 +13,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC&display=swap" rel="stylesheet">
     <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     
@@ -116,7 +117,7 @@
                         </div>
                 </div>
                 <div class="more_info">
-                        <a href="product_detail.html">詳細資訊</a>
+                        <a href="product_detail.html?id=1">詳細資訊</a>
                 </div>
             </div>
             <div class="product_group taipei">
@@ -269,6 +270,11 @@
                 </div>
             </div>
         </div>
+        <div class="goTop hide">
+            <a href="#" class="goTopBtn jq-goTop">
+                <i class="fas fa-arrow-alt-circle-up fa-3x"></i>
+            </a>
+        </div>
     </section>
     <section class="footer">
         <div class="footer_container">
@@ -303,6 +309,26 @@
             <p>本網站為緯育TibaMe前端工程師專業技術養成班第88期學員專題作品，本平台僅供學習、展示之用。
                 <br>參考網站｜https://ninetyroadtravel.com/｜https://baby-travel.jp/｜https://www.kkday.com/zh-tw/promo/Queensland｜https://gooone.help/about/</p>
         </div>
-    </section>    
+    </section>
+    <script>
+        $(".jq-goTop").click(function (e) {
+            e.preventDefault();
+            $("html,body").animate(
+            {
+                scrollTop: 0,
+            },
+            600
+            );
+        });
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 200) {
+                if ($(".goTop").hasClass("hide")) {
+                    $(".goTop").toggleClass("hide");
+                }
+            }else {
+                $(".goTop").addClass("hide");
+            }
+        });
+    </script>    
 </body>
 </html>

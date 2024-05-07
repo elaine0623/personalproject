@@ -36,7 +36,7 @@
                 <!-- 導覽列display flex -->
                 <div class="headeritems">
                     <nav>
-                        <div class="nav_wrap">
+                        <div class="nav_wrap" id="menu">
                             <div class="headeritem aboutus insidehb">
                                 <a href="aboutus.html">關於我們</a>
                             </div>
@@ -60,14 +60,14 @@
                             </div>
                             <div class="headeritem cart_icon">
                                 <a href="carts.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                                <div id="shopItems">1</div>
+                                <div id="shopItems"></div>
                             </div>
                             <div class="headeritem btn allsche">
                                 <a href="all_schedule.html">出團一覽</a>
                             </div>
                         </div>
                     </nav>
-                    <label for="menu-switch" class="hb">
+                    <label for="menu-switch" class="hb" id="hb">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -117,16 +117,18 @@
         </div>
         <div class="card_list">
             <div class="card_item">
-                <div class="pic card_pic1">
-                    <img src="img/pic1.png" alt="pic1">
-                </div>
-                <div class="card_txt">
-                    <div class="txt_box">
-                        <div class="news_date">2024.03.11</div>
-                        <div class="btn tag">最新情報</div>
+                <a href="news.html">
+                    <div class="pic card_pic1">
+                        <img src="img/pic1.png" alt="pic1">
                     </div>
-                    <h3>行程優惠</h3>
-                    <p>相關行程皆享折扣</p>
+                    <div class="card_txt">
+                        <div class="txt_box">
+                            <div class="news_date">2024.03.11</div>
+                            <div class="btn tag">最新情報</div>
+                        </div>
+                        <h3>行程優惠</h3>
+                        <p>相關行程皆享折扣</p>
+                </a>
                 </div>
             </div>
             <div class="card_item">
@@ -342,6 +344,11 @@
                 </div>
             </div>
         </div>
+        <div class="goTop hide">
+            <a href="#" class="goTopBtn jq-goTop">
+              <i class="fas fa-arrow-alt-circle-up fa-3x"></i>
+            </a>
+        </div>
     </section>
     <section class="footer">
         <div class="footer_container">
@@ -430,17 +437,24 @@
         AOS.init();
     </script>
     <script>
-        $(function(){
-            $('#menu-switch').prop(checked,true)(function(){
-                $(this).stop(true).animate({
-                    right: 0,
-                },1500,'easeInCubic')
-            },function(){
-                $(this).animate({
-					right: '-100%',	
-				}, 2000,'easeOutBounce')
-                })
-        })
+        $(".jq-goTop").click(function (e) {
+            e.preventDefault();
+            $("html,body").animate(
+            {
+                scrollTop: 0,
+            },
+            600
+            );
+        });
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 200) {
+                if ($(".goTop").hasClass("hide")) {
+                    $(".goTop").toggleClass("hide");
+                }
+            }else {
+                $(".goTop").addClass("hide");
+            }
+        });
     </script>
 </body>
 </html>

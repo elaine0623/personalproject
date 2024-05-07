@@ -65,6 +65,7 @@ header{
     height: 2px;
     background-color:#003E60;
     margin: -5px 0;
+
 }
 .logo{
     width: 160px;
@@ -75,9 +76,28 @@ header{
 }
 #menu-switch:checked ~ header .headeritems .hb{
     background-color:#003E60;
+    position: relative;
 }
 #menu-switch:checked ~ header .headeritems .hb span{
     background-color:#FFF;
+    width: 25px;
+
+}
+#menu-switch:checked ~ header .headeritems .hb span:first-child{
+    position: absolute;
+    transform: translate(-3px) rotate(45deg);
+    transition: 0.8s;
+    left:33%;
+}
+#menu-switch:checked ~ header .headeritems .hb span:nth-child(2){
+    transform: translateX(-30px);
+    background: transparent;
+}
+#menu-switch:checked ~ header .headeritems .hb span:last-child{
+    position: absolute;
+    transform: translate(-3px) rotate(-45deg);
+    transition: 0.8s;
+    left:33%;
 }
 @media screen and (min-width: 768px) {
     .headeritems .hb {
@@ -94,15 +114,19 @@ header{
     letter-spacing: 1.5px;
     display: block;
 }
-#shopItems{
-    /* display: none; */
-    border: 1px solid #FF9A66;
-    box-sizing: border-box;
-    background-color: #fff;
-    border-radius: 50%;
+.cart_icon{
     position: relative;
-    top: -24px;
-    right: -17px;
+}
+#shopItems{
+    display: none;
+    font-size: 14px;
+    padding: 1.5px 3px;
+    color: #FFF;
+    background-color: #9f4d23;
+    border-radius: 50%;
+    position: absolute;
+    left: 14px;
+    bottom: 10px;
 }
 .btn{
     border-radius: 25px;
@@ -125,6 +149,26 @@ header{
         font-size: 13px;
     }
 }
+.goTop {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    transform: translateX(0);
+    transition: 0.2s;
+}
+.goTopBtn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.fa-arrow-alt-circle-up {
+    color: lightblue;
+}
+.hide{
+    transform: translateX(120%);
+    display: none;
+}
 
 @media screen and (max-width:767px) {
     .logo{
@@ -135,7 +179,7 @@ header{
     }
     .allsche{
         background-color: #FF9A66;
-        padding: 5px 10px;
+        padding: 8px 10px;
     }
     .allsche a{
         color: #fff;
@@ -158,12 +202,16 @@ header{
         right: -95px;
         background-color: rgb(238, 238, 238);
         color: rgb(0, 0, 0);
-        width: 150%;
+        max-width: 375px;
+        width: 100vh;
         z-index: 1;
         gap:0
     }
     .nav_wrap .insidehb a{
         font-size: 20px;
+        padding-bottom: 10px;
+        color: #666;
+        border-bottom:1px solid #FFF;
     }
     .headeritems nav{
         position:relative;
@@ -188,8 +236,14 @@ header{
     /* .aboutus,.news,.schedule,.contactus,.login{
         border-bottom: 1px solid #fff;
     } */
-}
+    .goTop{
+        right: 2px;
+    }
+    .fa-arrow-alt-circle-up {
+        font-size: 36px;
+    }
 
+}
 
 
 .footer{
