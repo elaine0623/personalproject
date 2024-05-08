@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <script src="Js/shopitem.js"></script>
 </head>
 <body>
     <div class="header_container">
@@ -253,7 +254,7 @@
                     <h3>頭城老街</h3>
                     <div class="spot_card_list reverse">
                         <div class="spot_card_pic">
-                            <img src="img/food-fotor.png" alt="">
+                            <img src="img/taiwan-yilan-sanxing-scallion_P1720800.jpg" alt="">
                         </div>
                         <div class="spot_card_txt light">
                             <p>歷史悠久的街道，彷彿穿越時光隧道般回到過去。<br/>漫步在狹窄的街道上，探索保存完好的傳統建築，及充滿人情味的小吃攤位。</p>
@@ -262,7 +263,7 @@
                     <h3>出海前往龜山島</h3>
                     <div class="spot_card_list">
                         <div class="spot_card_pic">
-                            <img src="img/Yilan2.jpg" alt="">
+                            <img src="img/feature3.jpg" alt="">
                         </div>
                         <div class="spot_card_txt dark">
                             <p>登上太平洋上的神秘仙島<br/>
@@ -273,7 +274,7 @@
                     <h3>SUP徜徉於大海</h3>
                     <div class="spot_card_list reverse">
                         <div class="spot_card_pic reverse">
-                            <img src="img/flower.jpg" alt="">
+                            <img src="img/milksea-fotor.png" alt="">
                         </div>
                         <div class="spot_card_txt light">
                             <p>體驗SUP活動<br/>慢悠悠的徜徉大海洗淨夏天的悶熱與煩躁
@@ -283,7 +284,7 @@
                     <h3>欣賞海景返回岸上、入住旅店</h3>
                     <div class="spot_card_list">
                         <div class="spot_card_pic">
-                            <img src="img/climbing-fotor.png" alt="">
+                            <img src="img/caspia hotel.jpg" alt="">
                         </div>
                         <div class="spot_card_txt dark">
                             <p>龜山島返回烏石港<br/>
@@ -382,7 +383,7 @@
             }else{//4-1先將字串切割成陣列
                 if (id == null){
                     return
-                }
+                }//如果id=空字串不作異動
                 str = result + '|' + id;
                 var dataArray = result.split('|');
                 if($.inArray(id, dataArray) == -1){//假設陣列裡沒有這個id
@@ -392,8 +393,13 @@
                     alert('您已添加購物車')
                 }
             }
-            let num = (localStorage.getItem('cartItemid')).split('|');
-            $('#shopItems').show().text(num.length);
+            let num = (localStorage.getItem('cartItemid'));
+            if(num.length == 1){
+                $('#shopItems').show().text(num.length);
+            }else{
+                num = num.split('|');
+                $('#shopItems').show().text(num.length);
+            }
         })
     </script>
     <script>

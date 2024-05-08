@@ -166,6 +166,7 @@
     .banner{
         height: 60vh;
         margin-top: 15px;
+        background-attachment: scroll;
     }
     .banner_box{
         margin-bottom:60px ;

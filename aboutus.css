@@ -59,7 +59,7 @@
     width: 120px;
     padding-bottom: 8px;
 }
-.member_pic {
+.animate {
     animation: custom-swing 5s;
     -webkit-animation: custom-swing 5s;
     animation-iteration-count: 1;

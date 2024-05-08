@@ -14,6 +14,8 @@
     <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC&display=swap" rel="stylesheet">
     <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="Js/shopitem.js"></script>
 </head>
 
 <body>
@@ -48,6 +50,7 @@
                         </div>
                         <div class="headeritem cart_icon">
                             <a href="carts.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <div id="shopItems"></div>
                         </div>
                         <div class="headeritem btn allsche">
                             <a href="all_schedule.html">出團一覽</a>
@@ -230,6 +233,11 @@
             <p>本網站為緯育TibaMe前端工程師專業技術養成班第88期學員專題作品，本平台僅供學習、展示之用。
                 <br>參考網站｜https://ninetyroadtravel.com/｜https://baby-travel.jp/｜https://www.kkday.com/zh-tw/promo/Queensland｜https://gooone.help/about/</p>
         </div>
-    </section>   
+    </section>
+    <script>
+        $(".member_pic").hover(function () {
+            $(this).toggleClass("animate");
+        });
+    </script>
 </body>
 </html>

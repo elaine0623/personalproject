@@ -1,3 +1,18 @@
+header{
+    width: 98%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    padding: 0 15px;
+    position: fixed;
+    top: 0;
+    background-color:#FFF8F5;
+    z-index: 2;
+}
+.cart{
+    padding-top: 100px;
+}
+
 .title_other_recom{
     font-size: 24px;
     margin-bottom: 50px;
@@ -67,6 +82,15 @@
     bottom: 0;
     right: 50px;
 }
+.ui-datepicker .ui-widget-content {
+    background: lightblue none;
+}
+
+.ui-datepicker 
+{
+    background: lightblue;
+}
+
 input[type=checkbox]{
     margin: 0;
     width: 20px;
@@ -133,12 +157,12 @@ input[type=checkbox]:checked{
     display: block;
 }
 input[type = "date"],input[type = "number"]{
-    background-color: #999;
+    background-color: #eee;
     border: 3px #666;
     border-radius: 15px;
-    padding: 5px;
+    padding: 5px 10px 5px 5px;
     text-align: end;
-    color: #003E60;
+    color: #666;
     font-weight: 600;
 
 }
@@ -269,3 +293,5 @@ input[type = "number"]{
         padding-right: 15px;
     }
 }
+
+

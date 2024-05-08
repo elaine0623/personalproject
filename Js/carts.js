@@ -81,7 +81,8 @@ var travelData = [
         price: 8000,
     },
 ];
-let sum = 0;
+// let sum = 0;
+let count = {};
 for(let i = 0;i<selectData.length;i++){
     let item = travelData.find(item => item.id == selectData[i]); //找到商品ID的Object指派給item
     //console.log(item)
@@ -98,7 +99,7 @@ for(let i = 0;i<selectData.length;i++){
                     <div class="items">
                         <div class="date">
                             <label for="selectdate">選擇日期</label>
-                            <input type="text" id="datepicker_${item.id}" class="datepicker">
+                            <input type="text" id="datepicker_${item.id}" class="datepicker" onchange="selectDate(${item.id})">
                         </div>
                         <div class="counts">
                             <label for="selectpeople">選擇人數</label>
@@ -112,11 +113,13 @@ for(let i = 0;i<selectData.length;i++){
                 </div>`)
                 //發生change事件呼叫selectNum函數
                 $(`#total_${item.id}`).text(item.price);//一進入頁面就預設1個的價格
-                sum += item.price;//迴圈加總
-                if (i==selectData.length-1){//迴圈跑到最後一次時
-                    $('#sumall').text(sum)//在畫面上顯示
-                    $('#sumall_inner').text(sum)//同步存一個價格
-                }
+                // sum += item.price;//迴圈加總
+                // if (i==selectData.length-1){//迴圈跑到最後一次時
+                    count[item.id]= item.price;
+                    updateSum(); 
+                    // $('#sumall').text(sum)//在畫面上顯示
+                    // $('#sumall_inner').text(sum)//同步存一個價格
+                // }
                 //使用jQuery datepicker套件
                 $( `#datepicker_${item.id}` ).datepicker({
                     dateFormat:"yy/mm/dd",
@@ -124,18 +127,16 @@ for(let i = 0;i<selectData.length;i++){
                     changeMonth: true,
                     onSelect: function() { 
                         var dateObject = $(this).datepicker('getDate'); 
-                        //alert (dateObject); 用datepicer('getDate')抓到user選擇日期指派給dateObject
+                        //alert (dateObject); 用datepicker('getDate')抓到user選擇日期指派給dateObject
                         var formattedDate = $.datepicker.formatDate("yy/mm/dd", dateObject);//將dateObject的格式與startData的顯示一致
                         let itemlist = travelData.find(itemlist => itemlist.startData == formattedDate);
                         //console.log(itemlist);//尋找相同出發日的Object指派給{itemlist}
-                        var num = $(`#selectpeople_${item.id}`).val()//取user選擇人數的值
-                        old = $(`#total_${item.id}`).text();//取目前價格
-                        newdata = itemlist.price * num;//新Object的值*人數
-                        $(`#total_${item.id}`).text(newdata);//印出更新的小計         
-                        between = newdata - old;//兩者價差加到總計
-                        sumtotal = +($('#sumall').text());//取得目前總計的金額
-                        $('#sumall').text(sumtotal + between)//印出更新後的總計
-                        $('#sumall_inner').text(sumtotal +between)
+                        newdata = itemlist.price
+                        //alert(`小計:新Object的值${newdata}`);
+                        let total_list = newdata* $(`#selectpeople_${item.id}`).val();
+                        $(`#total_${item.id}`).text(total_list);
+                        count[item.id]= total_list;
+                        updateSum(); 
                     },
                     beforeShowDay: function(date) {//使用套件提供function限制可選天數
                         switch (item.id) {
@@ -194,16 +195,23 @@ for(let i = 0;i<selectData.length;i++){
                 });
                 //預設畫面初始日期
                 $( `#datepicker_${item.id}` ).datepicker( "setDate", `${item.startData}` );
+
+
 };
 //onchange="selectNum(${item.id})"
 function selectNum(id){
     var num = $(`#selectpeople_${id}`).val()
     let price = travelData.find(itemlist => itemlist.startData == $(`#datepicker_${id}`).val()).price;
-    //alert (price);//要找到當天日期對應到的價格
+    //alert (`找到當天日期對應到的價格price${price}`);//要找到當天日期對應到的價格
     //錯的price = +($(`#total_${id}`).text())
     $(`#total_${id}`).text(price * num);//小計等於數量*價格
-    // $('#sumall').text()
-    let sumall = +($('#sumall_inner').text())//取得原始價格
-    sumall += price * (num-1) ;//總計會等於數量- 1(起始值)
-    $('#sumall').text(sumall);
+    count[id]= price * num;
+    updateSum(); 
+}
+
+
+function updateSum() {
+    let values = Object.values(count);
+    let getcheck = values.reduce((accumulator, value) => accumulator + value, 0);
+    $('#sumall').text(getcheck); // 更新總和顯示
 }

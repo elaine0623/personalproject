@@ -1,7 +1,18 @@
+header{
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    position: fixed;
+    top: 0;
+    background-color:#FFF8F5;
+    z-index: 3;
+}
 .header_container{
     margin-bottom: 0;
 }
 .banner_box{
+    padding-top: 100px;
     margin: 0 auto;
     position: relative;
     width: 1200px;

@@ -13,7 +13,7 @@
         <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
         <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+        <script src="Js/shopitem.js"></script>
         <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
     </head>
 <body>
@@ -48,6 +48,7 @@
                         </div>
                         <div class="headeritem cart_icon">
                             <a href="carts.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <div id="shopItems"></div>
                         </div>
                         <div class="headeritem btn allsche">
                             <a href="#" >出團一覽</a>
@@ -98,17 +99,17 @@
                     <div class="sche_name"><a href="#">台中高美漫遊</a></div>
                     <div class="date">2024/4/3-2024/4/6</div>
                     <div class="price">&nbsp6,000元</div>
-                    <div id="May" class="festival">清明連假</div>
+                    <div class="festival">清明連假</div>
                     <div class="status_container">
                     <div class="status lastone">最後一名</div>
                 </div>
                     <div class="moredetail"><a href="product_detail.html?id=3">詳細行程</a></div>
                 </div>
-                <div class="sche_list">
+                <div class="sche_list" >
                     <div class="sche_name orange"><a href="product_detail.html">龜山島牛奶海</a></div>
                     <div class="date">2024/5/2-2024/5/4</div>
                     <div class="price">&nbsp6,000元</div>
-                    <div class="festival">五月平日</div>
+                    <div class="festival" id="May">五月平日</div>
                     <div class="status_container">
                         <div class="status available ">保證出團</div>
                     </div>
@@ -118,7 +119,7 @@
                     <div class="sche_name orange"><a href="#">國境之南墾丁</a></div>
                     <div class="date">2024/5/3-2024/5/7</div>
                     <div class="price">16,000元</div>
-                    <div id="June" class="festival">五月平日</div>
+                    <div class="festival">五月平日</div>
                     <div class="status_container">
                         <div class="status full">已額滿，開放候補</div>
                     </div>
@@ -128,7 +129,7 @@
                     <div class="sche_name"><a href="#">台北&nbsp草山旅&nbsp&nbsp</a></div>
                     <div class="date">2024/6/2-2024/6/4</div>
                     <div class="price">&nbsp5,000元</div>
-                    <div class="festival">端午連假</div>
+                    <div id="June" class="festival">端午連假</div>
                     <div class="status_container">
                         <div class="status full">&nbsp已額滿，開放候補</div>
                     </div>
@@ -262,6 +263,16 @@
                 $(".goTop").addClass("hide");
             }
         });
+        $(document).ready(function(){
+            $('.btn_list').on('click','a',function(e){
+                e.preventDefault();
+                const anchor = $(this).attr('href');
+                const linkScroll = $(anchor).offset().top;
+                $('html,body').stop().animate({
+                    scrollTop: linkScroll - 100
+                },500)
+            })
+        })
     </script>
 </body>
 </html>
