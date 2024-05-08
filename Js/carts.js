@@ -1,4 +1,3 @@
-//設定全選及全部取消功能
 function toggle(toggle_status) {
     var checkboxes = document.querySelectorAll('.item_check');//找到購物車內所有選取項目
     // console.log(toggle_status)
@@ -7,8 +6,7 @@ function toggle(toggle_status) {
             checkboxes[i].checked = toggle_status.checked;//將toggle的狀態指派給各個購物車子項
         }
     }
-}
-
+}//設定全選及全部取消功能
 //取得本機資料庫加入購物車項目
 const shoplist = (localStorage.getItem('cartItemid')).split('|');//將字串轉換成array
 const selectData = shoplist.slice();//複製array給selectData陣列
