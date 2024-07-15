@@ -6,6 +6,22 @@
   background-size: cover;
   margin-bottom: 0;
   /* max-width: 100%; */
+  position: relative;
+}
+h1{
+  height: 80%;
+  position: absolute;
+  right: 20%;
+  top:20%;
+}
+h1 > span{
+  color: #003E60;
+  font-family: "Noto Serif TC", serif;
+  font-size: clamp(24px,2.5vw,28px);
+  writing-mode:vertical-rl;
+  text-orientation:upright;
+  line-height: 56px;
+  font-weight: 500;
 }
 /* header獨立div */
 header{
@@ -572,6 +588,9 @@ font-size: 20px;
 @media screen and (max-width:412px){
   .group_pic{
     height: auto;
+  }
+  h1{
+    right: 15%;
   }
 }
 

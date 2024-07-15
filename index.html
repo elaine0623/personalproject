@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"></script>
     <script src="Js/shopitem.js"></script>
+    <script src="Js/t.js"></script>
 </head>
 <body>
     <!-- 背景圖設在header滿版設計 -->
@@ -74,6 +75,7 @@
                     </label>
                 </div>
             </header>
+            <h1><span id="theText">探索台灣 從這裡出發<br>深度且自在的半自助旅行方式</span></h1>
         </div>
     
     <div class="wave-container">
@@ -455,6 +457,16 @@
                 $(".goTop").addClass("hide");
             }
         });
+    </script>
+    <script>
+        $(function () {
+            $('#theText').t({ //套件可以修改的部分 defaults settings extend
+                speed:100, //單位是毫秒
+                delay:1,  //單位是秒
+                repeat: false,
+                pause_on_click: true,
+            })
+        })
     </script>
 </body>
 </html>

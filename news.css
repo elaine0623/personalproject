@@ -195,6 +195,8 @@
     display: flex;
     justify-content:center;
     gap: 15px;
+    cursor: grab;
+
 }
 .reason_list_txt{
     font-size: 16px;
@@ -290,6 +292,7 @@ backface-visibility: hidden;
     display: flex;
     gap: 15px;
     justify-content: space-around;
+    cursor: pointer;
 }
 .promote_txt{
     text-align: start;
