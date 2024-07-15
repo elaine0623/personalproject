@@ -59,6 +59,12 @@ header{
     margin-left: 20px;
 
 }
+.noschedule{
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Noto Sans TC';
+}
 .cart_group{
     width: 80%;
     margin: 0 auto ;

@@ -7,6 +7,31 @@ function toggle(toggle_status) {
         }
     }
 }//設定全選及全部取消功能
+
+function cancel() {
+    var checkboxes = document.querySelectorAll('.item_check');
+    for (var i = checkboxes.length - 1; i >= 0; i--) {
+        if (checkboxes[i].checked) {
+            // 移除對應的DOM元素
+            checkboxes[i].closest('.inner').remove();
+            // 從selectData陣列中移除對應的項目
+            var itemId = checkboxes[i].dataset.id;
+            var index = selectData.indexOf(itemId);
+            if (index > -1) {
+                selectData.splice(index, 1);
+            }
+            // 更新localStorage
+            localStorage.setItem('cartItemid', selectData.join('|'));
+        }
+    }
+    updateSum(); // 更新總和顯示
+    renderCartItems(); // 更新購物車顯示
+
+}
+
+
+
+
 //取得本機資料庫加入購物車項目
 const shoplist = (localStorage.getItem('cartItemid')).split('|');//將字串轉換成array
 const selectData = shoplist.slice();//複製array給selectData陣列
@@ -81,121 +106,130 @@ var travelData = [
 ];
 // let sum = 0;
 let count = {};
-for(let i = 0;i<selectData.length;i++){
-    let item = travelData.find(item => item.id == selectData[i]); //找到商品ID的Object指派給item
-    //console.log(item)
-    $('#allData').append(`<div class="inner">
-                    <div class="basic_info">
-                        <div class="checkbox">
-                            <input type="checkbox"class="item_check" checked>
-                        </div>
-                        <div class="items_pic">
-                            <img src="${item.pic}" alt="">
-                        </div>
-                        <p>${item.name}</p>
-                        </div>
-                    <div class="items">
-                        <div class="date">
-                            <label for="selectdate">選擇日期</label>
-                            <input type="text" id="datepicker_${item.id}" class="datepicker" onchange="selectDate(${item.id})">
-                        </div>
-                        <div class="counts">
-                            <label for="selectpeople">選擇人數</label>
-                            <input type="number" step="1" id="selectpeople_${item.id}" min="1" max="15" value="1" onchange="selectNum(${item.id})">
+
+
+function renderCartItems() {
+    if (selectData.length === 0 || (selectData.length === 1 && selectData[0] === "")) {
+        $('#allData').append(`<p class="noschedule">目前尚未選購行程</p>`);
+        return;
+    }
+    $('#allData').empty(); // 清空現有的購物車項目
+    for(let i = 0;i  <selectData.length; i++){
+        let item = travelData.find(item => item.id == selectData[i]); //找到商品ID的Object指派給item
+        //console.log(item)
+        $('#allData').append(`<div class="inner">
+                        <div class="basic_info">
+                            <div class="checkbox">
+                                <input type="checkbox"class="item_check" data-id="${item.id}" checked>
+                            </div>
+                            <div class="items_pic">
+                                <img src="${item.pic}" alt="">
+                            </div>
+                            <p>${item.name}</p>
+                            </div>
+                        <div class="items">
+                            <div class="date">
+                                <label for="selectdate">選擇日期</label>
+                                <input type="text" id="datepicker_${item.id}" class="datepicker" onchange="selectDate(${item.id})">
+                            </div>
+                            <div class="counts">
+                                <label for="selectpeople">選擇人數</label>
+                                <input type="number" step="1" id="selectpeople_${item.id}" min="1" max="15" value="1" onchange="selectNum(${item.id})">
+                            </div>
                         </div>
                     </div>
-                </div>
-                </div>
-                <div class="sum">
-                        TWD $ <span class="total" id="total_${item.id}"></span>
-                </div>`)
-                //發生change事件呼叫selectNum函數
-                $(`#total_${item.id}`).text(item.price);//一進入頁面就預設1個的價格
-                // sum += item.price;//迴圈加總
-                // if (i==selectData.length-1){//迴圈跑到最後一次時
-                    count[item.id]= item.price;
-                    updateSum(); 
-                    // $('#sumall').text(sum)//在畫面上顯示
-                    // $('#sumall_inner').text(sum)//同步存一個價格
-                // }
-                //使用jQuery datepicker套件
-                $( `#datepicker_${item.id}` ).datepicker({
-                    dateFormat:"yy/mm/dd",
-                    defaultDate: "+1w",
-                    changeMonth: true,
-                    onSelect: function() { 
-                        var dateObject = $(this).datepicker('getDate'); 
-                        //alert (dateObject); 用datepicker('getDate')抓到user選擇日期指派給dateObject
-                        var formattedDate = $.datepicker.formatDate("yy/mm/dd", dateObject);//將dateObject的格式與startData的顯示一致
-                        let itemlist = travelData.find(itemlist => itemlist.startData == formattedDate);
-                        //console.log(itemlist);//尋找相同出發日的Object指派給{itemlist}
-                        newdata = itemlist.price
-                        //alert(`小計:新Object的值${newdata}`);
-                        let total_list = newdata* $(`#selectpeople_${item.id}`).val();
-                        $(`#total_${item.id}`).text(total_list);
-                        count[item.id]= total_list;
+                    </div>
+                    <div class="sum">
+                            TWD $ <span class="total" id="total_${item.id}"></span>
+                    </div>`)
+                    //發生change事件呼叫selectNum函數
+                    $(`#total_${item.id}`).text(item.price);//一進入頁面就預設1個的價格
+                    // sum += item.price;//迴圈加總
+                    // if (i==selectData.length-1){//迴圈跑到最後一次時
+                        count[item.id]= item.price;
                         updateSum(); 
-                    },
-                    beforeShowDay: function(date) {//使用套件提供function限制可選天數
-                        switch (item.id) {
-                        case 1:
-                        case 4:
-                        case 7:
-                        case 9:
-                            if (date >= new Date(2024, 3, 2) && date <= new Date(2024, 3, 2)) {
-                                return [true, '', '可選'];
+                        // $('#sumall').text(sum)//在畫面上顯示
+                        // $('#sumall_inner').text(sum)//同步存一個價格
+                    // }
+                    //使用jQuery datepicker套件
+                    $( `#datepicker_${item.id}` ).datepicker({
+                        dateFormat:"yy/mm/dd",
+                        defaultDate: "+1w",
+                        changeMonth: true,
+                        onSelect: function() { 
+                            var dateObject = $(this).datepicker('getDate'); 
+                            //alert (dateObject); 用datepicker('getDate')抓到user選擇日期指派給dateObject
+                            var formattedDate = $.datepicker.formatDate("yy/mm/dd", dateObject);//將dateObject的格式與startData的顯示一致
+                            let itemlist = travelData.find(itemlist => itemlist.startData == formattedDate);
+                            //console.log(itemlist);//尋找相同出發日的Object指派給{itemlist}
+                            newdata = itemlist.price
+                            //alert(`小計:新Object的值${newdata}`);
+                            let total_list = newdata* $(`#selectpeople_${item.id}`).val();
+                            $(`#total_${item.id}`).text(total_list);
+                            count[item.id]= total_list;
+                            updateSum(); 
+                        },
+                        beforeShowDay: function(date) {//使用套件提供function限制可選天數
+                            switch (item.id) {
+                            case 1:
+                            case 4:
+                            case 7:
+                            case 9:
+                                if (date >= new Date(2024, 3, 2) && date <= new Date(2024, 3, 2)) {
+                                    return [true, '', '可選'];
+                                }
+                                    // 日期範圍指定出發日: 2024-05-02
+                                if (date >= new Date(2024, 4, 2) && date <= new Date(2024, 4, 2)) {
+                                    return [true, '', '可選'];
+                                }
+                                if (date >= new Date(2024, 5, 1) && date <= new Date(2024, 5, 1)){ 
+                                    return [true, '', '可選'];
+                                }
+                                if (date >= new Date(2024, 6, 2) && date <= new Date(2024, 6, 2)){ 
+                                    return [true, '', '可選'];
+                                }else{
+                                    return [false, '', '不可選'];
+                                }
+                                break;
+                            case 2:
+                            case 6:
+                            case 8:
+                                if (date >= new Date(2024, 3, 1) && date <= new Date(2024, 3, 1)) {
+                                    return [true, '', '可選'];
+                                }
+                                    // 日期範圍指定出發日: 2024-05-02
+                                if (date >= new Date(2024, 5, 2) && date <= new Date(2024, 5, 2)) {
+                                    return [true, '', '可選'];
+                                }
+                                if (date >= new Date(2024, 5, 3) && date <= new Date(2024, 5, 3)) {
+                                    return [true, '', '可選'];
+                                }else{
+                                    return [false, '', '不可選'];
+                                }
+                                break;
+                            case 3:
+                                if (date >= new Date(2024, 3, 3) && date <= new Date(2024, 3, 3)) {
+                                    return [true, '', '可選'];
+                                }else{
+                                    return [false, '', '不可選'];
+                                }
+                                break; 
+                            case 5:
+                                if (date >= new Date(2024, 4, 3) && date <= new Date(2024, 4, 3)) {
+                                    return [true, '', '可選'];
+                                }else{
+                                    return [false, '', '不可選'];
+                                }
+                                break;
                             }
-                                // 日期範圍指定出發日: 2024-05-02
-                            if (date >= new Date(2024, 4, 2) && date <= new Date(2024, 4, 2)) {
-                                return [true, '', '可選'];
-                            }
-                            if (date >= new Date(2024, 5, 1) && date <= new Date(2024, 5, 1)){ 
-                                return [true, '', '可選'];
-                            }
-                            if (date >= new Date(2024, 6, 2) && date <= new Date(2024, 6, 2)){ 
-                                return [true, '', '可選'];
-                            }else{
-                                return [false, '', '不可選'];
-                            }
-                            break;
-                        case 2:
-                        case 6:
-                        case 8:
-                            if (date >= new Date(2024, 3, 1) && date <= new Date(2024, 3, 1)) {
-                                return [true, '', '可選'];
-                            }
-                                // 日期範圍指定出發日: 2024-05-02
-                            if (date >= new Date(2024, 5, 2) && date <= new Date(2024, 5, 2)) {
-                                return [true, '', '可選'];
-                            }
-                            if (date >= new Date(2024, 5, 3) && date <= new Date(2024, 5, 3)) {
-                                return [true, '', '可選'];
-                            }else{
-                                return [false, '', '不可選'];
-                            }
-                            break;
-                        case 3:
-                            if (date >= new Date(2024, 3, 3) && date <= new Date(2024, 3, 3)) {
-                                return [true, '', '可選'];
-                            }else{
-                                return [false, '', '不可選'];
-                            }
-                            break; 
-                        case 5:
-                            if (date >= new Date(2024, 4, 3) && date <= new Date(2024, 4, 3)) {
-                                return [true, '', '可選'];
-                            }else{
-                                return [false, '', '不可選'];
-                            }
-                            break;
                         }
-                    }
-                });
-                //預設畫面初始日期
-                $( `#datepicker_${item.id}` ).datepicker( "setDate", `${item.startData}` );
+                    });
+                    //預設畫面初始日期
+                    $( `#datepicker_${item.id}` ).datepicker( "setDate", `${item.startData}` );
 
 
-};
+    };
+}
 //onchange="selectNum(${item.id})"
 function selectNum(id){
     var num = $(`#selectpeople_${id}`).val()
@@ -213,3 +247,6 @@ function updateSum() {
     let getcheck = values.reduce((accumulator, value) => accumulator + value, 0);
     $('#sumall').text(getcheck); // 更新總和顯示
 }
+
+// 初始渲染購物車項目
+renderCartItems();
